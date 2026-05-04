@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0B1C3D;
+  --color-brand-gold: #C9A65A;
+  --color-brand-beige: #E8E2D8;
+  --color-brand-muted: #2F3E4E;
+}
+
+body {
+  background-color: var(--color-brand-navy);
+  color: var(--color-brand-beige);
+  overflow-x: hidden;
+  font-family: 'GeneralSans-Variable', 'General Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'ClashDisplay-Variable', 'Clash Display', sans-serif;
+}
+
+.font-special {
+  font-family: 'Satoshi-Variable', 'Satoshi', sans-serif;
+}
+
+/* Snap Scroll Styles */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-section {
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-panel {
+  background: rgba(47, 62, 78, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 166, 90, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(11, 28, 61, 0.9), transparent);
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  color: var(--color-brand-beige);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'General Sans', sans-serif;
+}
+
+.nav-links a:hover {
+  color: var(--color-brand-gold);
+}
+
+.btn-primary {
+  background: var(--color-brand-gold);
+  color: var(--color-brand-navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(201, 166, 90, 0.4);
+}
+
+/* Graphic elements */
+.hero-glow {
+  position: absolute;
+  right: 0vw;
+  top: 5vh;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(201, 166, 90, 0.2) 0%, rgba(11, 28, 61, 0) 65%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.earth-arc {
+  position: absolute;
+  right: 5vw;
+  top: 10vh;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%), url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  box-shadow: 
+    inset 0 0 100px rgba(255, 255, 255, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.7),
+    0 0 120px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.earth-arc::before, .earth-arc::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 226, 216, 0.1);
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.earth-arc::before {
+  transform: scaleX(0.5);
+}
+
+.earth-arc::after {
+  transform: scaleY(0.5);
+}
+
+.whatsapp-cursor {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMjVEMzY2Ij48cGF0aCBkPSJNMTIuMDMxIDBDNS40MDUgMCAuMDIyIDUuMzg1LjAyMiAxMi4wMTZjMCAyLjEyMi41NTMgNC4xOTUgMS42MDUgNi4wMTZMMCAyNGw2LjExMy0xLjYwM2MxLjc2NS45NjcgMy43NjYgMS40OCA1LjkxOCAxLjQ4IDYuNjI2IDAgMTIuMDA5LTUuMzg1IDEyLjAwOS0xMi4wMTZTMTguNjU3IDAgMTIuMDMxIDB6bTUuODIgMTcuMjQzYy0uMjY2Ljc0OC0xLjU0MyAxLjQyOC0yLjE0NiAxLjUwMy0uNTM3LjA2Ny0xLjIyOC4xNjMtMy40ODYtLjc3Mi0zLjIzLTEuMzQtNS4zMDMtNC42MzYtNS40NjQtNC44NS0uMTYtLjIxNS0xLjMwNi0xLjc0Mi0xLjMwNi0zLjMyMiAwLTEuNTguODI1LTIuMzY4IDEuMTItMi42Ny4yOTQtLjMuNjQtLjM3NC44NTMtLjM3NC4yMTMgMCAuNDI2LjAwMi42MTMuMDEuMTkyLjAxLjQ1My0uMDc1LjcwNy41NC4yNjYuNjQuOTA3IDIuMjE1Ljk4NyAyLjM3NS4wOC4xNi4xMzMuMzQ2LjAyNi41Ni0uMTA3LjIxMy0uMTYuMzQ3LS4zMi41MzMtLjE2LjE4Ny0uMzMzLjQxMy0uNDguNTQ3LS4xNi4xNDctLjMyOC4zMDctLjE0Ny42MTQuMTgxLjMwNy44MDUgMS4zMjYgMS43MzMgMi4xNTIgMS4yIDEuMDY5IDIuMTk3IDEuNCAyLjUwMyAxLjU0OC4zMDcuMTQ3LjQ4LjEyLjY2LS4wOTMuMTgtLjIxNC43NzMtLjkwNy45OC0xLjIxNC4yMDctLjMwNy40MTQtLjI1NC42OTQtLjE0Ny4yOC4xMDYgMS43Ni44MjcgMi4wNjYuOTguMzA3LjE1My41MTMuMjI2LjU4Ny4zNTMuMDczLjEyNy4wNzMuNzQtLjE5MyAxLjQ4N3oiLz48L3N2Zz4=') 16 16, pointer !important;
+}
+
+.scroll-up-cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23C9A65A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="%230B1C3D"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>') 16 16, pointer !important;
+}
