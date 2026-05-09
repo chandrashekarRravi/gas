@@ -1,8 +1,9 @@
 import './style.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -15,7 +16,7 @@ app.innerHTML = `
       <div class="nav-links hidden md:flex items-center gap-6">
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
-        <a href="#scholarships">Countries</a>
+        <a href="#countries">Countries</a>
         <a href="#whyus">Why Us</a>
         <a href="#contact">Contact</a>
       </div>
@@ -35,7 +36,31 @@ app.innerHTML = `
     <section id="about" class="snap-section about-section bg-brand-navy relative overflow-hidden min-h-screen pt-28 pb-12 flex items-center">
       <!-- Background Earth Globe Effects -->
       <div class="hero-glow"></div>
-      <div class="earth-arc"></div>
+      <div class="earth-arc">
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none" id="globe-svg">
+          <defs>
+            <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="1.5" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="0.5" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+            <linearGradient id="route-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C9A65A" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#00D2FF" stop-opacity="0.2"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Source Point: South India (Bengaluru) -->
+          <circle cx="58.5" cy="48.5" r="0.8" fill="#C9A65A" filter="url(#glow-strong)" class="globe-source" />
+          <circle cx="58.5" cy="48.5" r="3" fill="none" stroke="#C9A65A" stroke-width="0.2" class="globe-source-pulse" />
+
+          <!-- Dynamic Routes Container -->
+          <g id="globe-routes-container"></g>
+        </svg>
+      </div>
 
       <div class="mx-auto px-6 md:px-16 lg:px-24 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 z-10 relative">
         
@@ -67,8 +92,7 @@ app.innerHTML = `
           </div>
         </div>
 
-        <!-- Right Side: Locations -->
-        <div class="w-full lg:w-[45%] flex flex-col mt-8 lg:mt-0 about-locations">
+        <!-- Right Side: Locations <div class="w-full lg:w-[45%] flex flex-col mt-8 lg:mt-0 about-locations">
           <div class="flex items-center gap-3 mb-4 md:mb-6">
             <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             <div>
@@ -91,7 +115,8 @@ app.innerHTML = `
               <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
             </a>
           </div>
-        </div>
+        </div> -->
+        
 
       </div>
     </section>
@@ -144,19 +169,48 @@ app.innerHTML = `
       </div>
     </section>
 
-    <!-- Scholarships Section -->
-    <section id="scholarships" class="snap-section bg-brand-muted">
-      <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-16">
-        <div class="flex-1 scholarship-img">
-           <div class="w-full h-96 rounded-3xl glass-panel relative overflow-hidden flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 to-transparent"></div>
-              <span class="text-5xl font-heading text-brand-beige/20 text-center">SCHOLARSHIPS</span>
-           </div>
+    <!-- Countries Section -->
+    <section id="countries" class="snap-section bg-[#0A0E17] text-white py-24 min-h-screen flex flex-col justify-center">
+      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-8 country-title">
+          <h2 class="text-5xl md:text-7xl font-heading leading-tight tracking-wide text-brand-gold">
+            Study<br/>
+            <span class="font-serif italic text-white/80 text-4xl md:text-6xl normal-case">Destinations</span>
+          </h2>
+          <p class="text-white/50 max-w-sm text-sm md:text-base leading-relaxed font-special pb-2">
+            Explore our extensive network of partner universities across these beautiful countries, offering world-class medical education.
+          </p>
         </div>
-        <div class="flex-1 scholarship-content">
-          <h2 class="text-4xl md:text-5xl font-heading mb-6 text-brand-gold">Fund Your Future</h2>
-          <p class="text-brand-beige/80 text-lg mb-8">Access millions in exclusive scholarships. We help you identify and apply for grants, waivers, and financial aid across top global medical universities.</p>
-          <button class="btn-primary">View Opportunities</button>
+
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 md:gap-6 country-grid justify-center">
+          ${['Russia', 'Georgia', 'Kazakhstan', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Mauritius', 'Philippines', 'Kyrgyzstan'].map((country, i) => `
+            <div class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
+                 style="background: linear-gradient(135deg, ${i % 3 === 0 ? '#4A0E17, #1A0407' : i % 3 === 1 ? '#0B291A, #020B05' : '#0A1C3A, #020710'}); box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);">
+              
+              <!-- Fabric texture overlay -->
+              <div class="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+              
+              <!-- Spine detailing -->
+              <div class="absolute left-0 top-0 bottom-0 w-2 bg-black/40 border-r border-brand-gold/10"></div>
+              
+              <div class="text-brand-gold/90 uppercase tracking-[0.15em] text-[8px] md:text-[10px] font-heading text-center mt-2 z-10 w-full px-2" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">${country}</div>
+              
+              <div class="w-10 h-10 md:w-14 md:h-14 rounded-full border-[1.5px] border-brand-gold/60 flex items-center justify-center bg-brand-gold/5 z-10 relative">
+                <!-- Inner crest detailing -->
+                <div class="absolute inset-1 rounded-full border-[0.5px] border-brand-gold/30 border-dashed"></div>
+                <svg class="w-5 h-5 md:w-7 md:h-7 text-brand-gold/80" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              
+              <div class="text-brand-gold/60 uppercase tracking-[0.25em] text-[6px] md:text-[7px] font-special text-center mb-1 z-10" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">PASSPORT</div>
+              
+              <!-- Glare effect -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-md z-20" style="transform: translateX(-100%) skewX(-15deg); animation: shimmer 3s infinite; animation-play-state: paused;"></div>
+            </div>
+          `).join('')}
+          <style>
+            .passport-card:hover .bg-gradient-to-tr { animation-play-state: running; }
+            @keyframes shimmer { 100% { transform: translateX(200%) skewX(-15deg); } }
+          </style>
         </div>
       </div>
     </section>
@@ -293,12 +347,186 @@ tl.from('.earth-arc', {
   ease: 'power3.out'
 }, 0);
 
+// Make the globe rotation much slower for a premium feel
 gsap.to('.earth-arc', {
   rotation: 360,
-  duration: 40,
+  duration: 150, // Slower rotation
   repeat: -1,
   ease: 'linear'
 });
+
+// Setup the Globe Routes Animation with EXACT manual visual coordinates corresponding to the visible map
+const routesData = [
+  { name: 'Russia', cx: 40, cy: 25 },
+  { name: 'Georgia', cx: 43, cy: 33 },
+  { name: 'Kazakhstan', cx: 50, cy: 28 },
+  { name: 'Uzbekistan', cx: 50, cy: 33 },
+  { name: 'Belarus', cx: 37, cy: 26 },
+  { name: 'Vietnam', cx: 70, cy: 45 },
+  { name: 'Bosnia', cx: 34, cy: 34 },
+  { name: 'Timor-Leste', cx: 82, cy: 58 },
+  { name: 'Mauritius', cx: 46, cy: 61 },
+  { name: 'Philippines', cx: 78, cy: 47 },
+  { name: 'Kyrgyzstan', cx: 54, cy: 32 }
+];
+const sourcePt = { cx: 58.5, cy: 48.5 };
+const routesContainer = document.getElementById('globe-routes-container');
+
+if (routesContainer) {
+  routesData.forEach((dest, i) => {
+    // Calculate bezier control point to make it an elegant curve
+    const midX = (sourcePt.cx + dest.cx) / 2;
+    const midY = (sourcePt.cy + dest.cy) / 2;
+    const dist = Math.sqrt(Math.pow(dest.cx - sourcePt.cx, 2) + Math.pow(dest.cy - sourcePt.cy, 2));
+    const angle = Math.atan2(dest.cy - sourcePt.cy, dest.cx - sourcePt.cx);
+
+    // Offset the curve based on distance
+    const controlX = midX - Math.sin(angle) * (dist * 0.3);
+    const controlY = midY + Math.cos(angle) * (dist * 0.3);
+    const d = `M ${sourcePt.cx} ${sourcePt.cy} Q ${controlX} ${controlY} ${dest.cx} ${dest.cy}`;
+
+    const routeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+
+    // Background trace (soft)
+    const bgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    bgPath.setAttribute('d', d);
+    bgPath.setAttribute('fill', 'none');
+    bgPath.setAttribute('stroke', 'rgba(201, 166, 90, 0.1)');
+    bgPath.setAttribute('stroke-width', '0.3');
+
+    // Active glowing route
+    const activePath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    activePath.setAttribute('d', d);
+    activePath.setAttribute('fill', 'none');
+    activePath.setAttribute('stroke', 'url(#route-gradient)');
+    activePath.setAttribute('stroke-width', '0.4');
+    activePath.setAttribute('filter', 'url(#glow-subtle)');
+    activePath.setAttribute('class', `route-path route-${i}`);
+
+    // Travelling particle
+    const particle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    particle.setAttribute('r', '0.4');
+    particle.setAttribute('fill', '#fff');
+    particle.setAttribute('filter', 'url(#glow-strong)');
+    particle.setAttribute('class', `route-particle route-particle-${i}`);
+
+    // Destination marker
+    const destMarker = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    destMarker.setAttribute('cx', String(dest.cx));
+    destMarker.setAttribute('cy', String(dest.cy));
+    destMarker.setAttribute('r', '0.6');
+    destMarker.setAttribute('fill', '#00D2FF');
+    destMarker.setAttribute('filter', 'url(#glow-strong)');
+    destMarker.setAttribute('class', `dest-marker dest-${i}`);
+    destMarker.style.opacity = '0';
+
+    // Tooltip
+    const tooltip = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    tooltip.setAttribute('x', String(dest.cx));
+    tooltip.setAttribute('y', String(dest.cy - 1.5));
+    tooltip.setAttribute('fill', 'rgba(255,255,255,0.8)');
+    tooltip.setAttribute('font-size', '1.8');
+    tooltip.setAttribute('font-family', 'Clash Display, sans-serif');
+    tooltip.setAttribute('text-anchor', 'middle');
+    tooltip.setAttribute('class', `dest-tooltip tooltip-${i}`);
+    tooltip.textContent = dest.name;
+    tooltip.style.opacity = '0';
+
+    routeGroup.appendChild(bgPath);
+    routeGroup.appendChild(activePath);
+    routeGroup.appendChild(particle);
+    routeGroup.appendChild(destMarker);
+    routeGroup.appendChild(tooltip);
+    routesContainer.appendChild(routeGroup);
+  });
+
+  // Source Pulse Animation
+  gsap.to('.globe-source-pulse', {
+    scale: 2,
+    opacity: 0,
+    duration: 2,
+    repeat: -1,
+    ease: 'power1.out',
+    transformOrigin: 'center'
+  });
+
+  gsap.to('.globe-source', {
+    opacity: 0.5,
+    duration: 1.5,
+    yoyo: true,
+    repeat: -1,
+    ease: 'sine.inOut'
+  });
+
+  // Cinematic Sequence Timeline
+  const globeTl = gsap.timeline({ repeat: -1, delay: 1 });
+
+  routesData.forEach((_, i) => {
+    const path: any = document.querySelector(`.route-${i}`);
+    const length = path.getTotalLength();
+
+    // Setup initial state
+    gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+    gsap.set(`.route-particle-${i}`, { opacity: 0 });
+
+    const routeTl = gsap.timeline();
+
+    // Draw route
+    routeTl.to(path, {
+      strokeDashoffset: 0,
+      duration: 1.5,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // Animate particle along path
+    routeTl.to(`.route-particle-${i}`, {
+      opacity: 1,
+      duration: 0.1
+    }, 0);
+
+    routeTl.to(`.route-particle-${i}`, {
+      motionPath: {
+        path: path,
+        align: path,
+        alignOrigin: [0.5, 0.5]
+      },
+      duration: 1.5,
+      ease: 'power2.inOut'
+    }, 0);
+
+    // Hide particle at the end
+    routeTl.to(`.route-particle-${i}`, {
+      opacity: 0,
+      duration: 0.2
+    }, 1.4);
+
+    // Destination glow & Tooltip
+    routeTl.to(`.dest-${i}`, {
+      opacity: 1,
+      scale: 1.5,
+      transformOrigin: 'center',
+      duration: 0.4,
+      ease: 'back.out(2)'
+    }, 1.3);
+
+    routeTl.to(`.tooltip-${i}`, {
+      opacity: 1,
+      y: -1,
+      duration: 0.4,
+      ease: 'power2.out'
+    }, 1.3);
+
+    // Fade out elements slightly but keep them visible as trace
+    routeTl.to([path, `.dest-${i}`, `.tooltip-${i}`], {
+      opacity: 0.3,
+      duration: 1.5,
+      ease: 'power2.inOut',
+      delay: 1.5
+    });
+
+    globeTl.add(routeTl, i * 0.8); // Stagger sequences by 0.8s
+  });
+}
 
 // 3D Fade out on scroll for Hero
 const heroScrollTl = gsap.timeline({
@@ -379,17 +607,12 @@ sections.forEach((section: any) => {
     });
   }
 
-  // Scholarships Section
-  if (section.id === 'scholarships') {
-    // Image from Left
-    gsap.from('.scholarship-img', {
+  // Countries Section
+  if (section.id === 'countries') {
+    // Title from Left
+    gsap.from(section.querySelector('.country-title'), {
       scrollTrigger: { trigger: section, scroller: '.snap-container', start: 'top 70%', toggleActions: 'play none none reverse' },
-      x: -150, rotation: -5, opacity: 0, duration: 1.5, ease: 'power4.out'
-    });
-    // Content from Right
-    gsap.from('.scholarship-content', {
-      scrollTrigger: { trigger: section, scroller: '.snap-container', start: 'top 70%', toggleActions: 'play none none reverse' },
-      x: 150, opacity: 0, duration: 1.5, ease: 'power4.out'
+      x: -150, opacity: 0, duration: 1.5, ease: 'power4.out'
     });
   }
 
