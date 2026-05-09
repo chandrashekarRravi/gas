@@ -10,11 +10,13 @@ const app = document.querySelector<HTMLDivElement>('#app')!
 app.innerHTML = `
   <nav class="nav-header">
     <div class="flex items-center gap-2">
-      <img src="/FAAA22.png" alt="Gandharva" style="height: 80px; width: auto; mix-blend-mode: multiply;" />
+      <a href="/">
+        <img src="/FAAA22.png" alt="Gandharva" style="height: 80px; width: auto; mix-blend-mode: multiply;" />
+      </a>
     </div>
     <div class="flex items-center gap-8 ml-auto">
       <div class="nav-links hidden md:flex items-center gap-6">
-        <a href="#about">About</a>
+        <a href="/about.html">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#countries">Countries</a>
         <a href="#whyus">Why Us</a>
@@ -183,7 +185,7 @@ app.innerHTML = `
         </div>
 
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 md:gap-6 country-grid justify-center">
-          ${['Russia', 'Georgia', 'Kazakhstan', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Mauritius', 'Philippines', 'Kyrgyzstan'].map((country, i) => `
+          ${['Russia', 'Georgia', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste'].map((country, i) => `
             <div class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
                  style="background: linear-gradient(135deg, ${i % 3 === 0 ? '#4A0E17, #1A0407' : i % 3 === 1 ? '#0B291A, #020B05' : '#0A1C3A, #020710'}); box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);">
               
