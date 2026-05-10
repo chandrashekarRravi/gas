@@ -288,9 +288,9 @@ app.innerHTML = `
       
       <div class="max-w-[85rem] mx-auto px-6 w-full z-10 relative flex flex-col h-full justify-center">
         
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 w-full mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6 w-full mt-12">
           <!-- Col 1 -->
-          <div class="col-span-1 md:col-span-4 flex flex-col gap-6">
+          <div class="col-span-1 md:col-span-3 flex flex-col gap-6">
             <div class="flex items-center gap-3">
               <div class="flex items-center gap-2">
                 <img src="/FAAA22.png" alt="Gandharva" style="height: 48px; width: auto; mix-blend-mode: multiply;" />
@@ -326,15 +326,30 @@ app.innerHTML = `
             </a>
           </div>
 
-          <!-- Col 4 -->
-          <div class="col-span-1 md:col-span-4 flex flex-col gap-4 pl-0 md:pl-8">
+          <!-- Col 4 (Branches) -->
+          <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
+            <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Our Branches</h4>
+            <div class="flex flex-col gap-4">
+              <div>
+                <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Head Office</p>
+                <p class="text-sm text-slate-500 font-special leading-relaxed">Shivamogga, India</p>
+              </div>
+              <div>
+                <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Regional Branch</p>
+                <p class="text-sm text-slate-500 font-special leading-relaxed">Davanagere, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 5 -->
+          <div class="col-span-1 md:col-span-3 flex flex-col gap-4 pl-0 md:pl-4">
             <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Newsletter</h4>
             <p class="text-sm text-slate-500 font-special leading-relaxed max-w-sm">
               Stay ahead with abroad studies tips and university admission strategies that drive results.
             </p>
             <div class="relative mt-2 max-w-sm">
               <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 font-special text-sm">@</span>
-              <input type="email" placeholder="Enter your email..." class="w-full bg-white border border-slate-200/60 rounded-full py-3.5 pl-12 pr-16 text-sm focus:outline-none focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF] transition-all text-slate-700 shadow-sm font-special placeholder:text-slate-400">
+              <input type="email" placeholder="Enter your email..." class="w-full bg-white border border-slate-200/60 rounded-full py-3.5 pl-12 pr-12 text-sm focus:outline-none focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF] transition-all text-slate-700 shadow-sm font-special placeholder:text-slate-400">
               <button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0066FF] text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </button>
