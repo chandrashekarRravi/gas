@@ -87,7 +87,58 @@ app.innerHTML = `
       
     </div>
 
-    <div class="grid md:grid-cols-2 gap-16 mb-24">
+    <!-- Stats Section -->
+    <div class="w-full mt-16 mb-32 stat-section">
+      <div class="flex flex-col md:flex-row items-stretch justify-between w-full">
+        
+        <!-- Stat 1 -->
+        <div class="flex-1 relative w-full group overflow-hidden border-b border-white/10 md:border-b-0 md:border-l border-white/10 transition-colors duration-500 hover:border-brand-gold/50 hover:bg-white/[0.02]">
+          <div class="stat-item flex flex-col items-start justify-center px-6 md:px-8 lg:px-12 py-16 md:py-24 w-full h-full">
+            <div class="flex items-start mb-1">
+              <span class="text-[5rem] md:text-[6rem] lg:text-[7rem] font-serif text-white leading-[0.8] tracking-tighter">500</span>
+              <span class="text-3xl md:text-5xl font-serif text-white leading-none mt-1 md:mt-2 ml-1">+</span>
+            </div>
+            <p class="text-white/80 font-special font-semibold text-sm md:text-[15px] tracking-wide mt-6">Successful Placements</p>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="flex-1 relative w-full group overflow-hidden border-b border-white/10 md:border-b-0 md:border-l border-white/10 transition-colors duration-500 hover:border-brand-gold/50 hover:bg-white/[0.02]">
+          <div class="stat-item flex flex-col items-start justify-center px-6 md:px-8 lg:px-12 py-16 md:py-24 w-full h-full">
+            <div class="flex items-start mb-1">
+              <span class="text-[5rem] md:text-[6rem] lg:text-[7rem] font-serif text-white leading-[0.8] tracking-tighter">150</span>
+              <span class="text-3xl md:text-5xl font-serif text-white leading-none mt-1 md:mt-2 ml-1">+</span>
+            </div>
+            <p class="text-white/80 font-special font-semibold text-sm md:text-[15px] tracking-wide mt-6">Partner Universities</p>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="flex-1 relative w-full group overflow-hidden border-b border-white/10 md:border-b-0 md:border-l border-white/10 transition-colors duration-500 hover:border-brand-gold/50 hover:bg-white/[0.02]">
+          <div class="stat-item flex flex-col items-start justify-center px-6 md:px-8 lg:px-12 py-16 md:py-24 w-full h-full">
+            <div class="flex items-start mb-1">
+              <span class="text-[5rem] md:text-[6rem] lg:text-[7rem] font-serif text-white leading-[0.8] tracking-tighter">98</span>
+              <span class="text-3xl md:text-5xl font-serif text-white leading-none mt-1 md:mt-2 ml-1">%</span>
+            </div>
+            <p class="text-white/80 font-special font-semibold text-sm md:text-[15px] tracking-wide mt-6">Satisfied Students</p>
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="flex-1 relative w-full group overflow-hidden md:border-l md:border-r border-white/10 transition-colors duration-500 hover:border-brand-gold/50 hover:bg-white/[0.02]">
+          <div class="stat-item flex flex-col items-start justify-center px-6 md:px-8 lg:px-12 py-16 md:py-24 w-full h-full">
+            <div class="flex items-start mb-1">
+              <span class="text-[5rem] md:text-[6rem] lg:text-[7rem] font-serif text-white leading-[0.8] tracking-tighter">20</span>
+              <span class="text-3xl md:text-5xl font-serif text-white leading-none mt-1 md:mt-2 ml-1">+</span>
+            </div>
+            <p class="text-white/80 font-special font-semibold text-sm md:text-[15px] tracking-wide mt-6">Countries Worldwide</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-16 mb-24" id="mission">
       <div class="glass-panel p-10 rounded-3xl border border-brand-gold/20 bg-brand-muted/20 opacity-0 translate-y-10 about-fade-in">
         <h2 class="text-3xl font-heading text-brand-gold mb-6">OUR MISSION</h2>
         <p class="text-brand-beige/80 text-lg leading-relaxed font-special italic">
@@ -192,3 +243,20 @@ burstTl.from('.collage-left', { x: '15vw', y: '10vh', rotation: 15, scale: 0.8, 
        .from('.collage-bl', { x: '20vw', y: '-15vh', rotation: 25, scale: 0.6, opacity: 0 }, 0)
        .from('.collage-br', { x: '-20vw', y: '-15vh', rotation: -25, scale: 0.6, opacity: 0 }, 0)
        .from('.collage-center', { scale: 0.85, y: '5vh', opacity: 0 }, 0)
+
+const statTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.stat-section',
+    start: 'top 85%',
+    end: 'top 30%',
+    scrub: 1.5,
+  }
+})
+
+statTl.from('.stat-item', {
+  y: 250,
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1.5,
+  ease: 'power3.out'
+})
