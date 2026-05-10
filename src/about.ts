@@ -138,19 +138,94 @@ app.innerHTML = `
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-16 mb-24" id="mission">
-      <div class="glass-panel p-10 rounded-3xl border border-brand-gold/20 bg-brand-muted/20 opacity-0 translate-y-10 about-fade-in">
-        <h2 class="text-3xl font-heading text-brand-gold mb-6">OUR MISSION</h2>
-        <p class="text-brand-beige/80 text-lg leading-relaxed font-special italic">
-          "To be a trusted bridge between students and global education opportunities. We envision a generation of skilled professionals who learn from the best universities worldwide and contribute to building a stronger, educated India."
+    <!-- Scroll Pinned Container -->
+    <div class="scroll-tabs-container max-w-7xl mx-auto w-full mb-32 px-4 md:px-8 mt-24" id="mission">
+      
+      <!-- Header Section -->
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 mb-16 opacity-0 translate-y-10 about-fade-in">
+        <h2 class="text-5xl md:text-7xl font-heading text-white leading-[1.1] max-w-2xl tracking-wide">
+          We Are Here<br/>For A Simple Reason!
+        </h2>
+        <p class="text-brand-beige/70 font-special text-sm md:text-base leading-relaxed max-w-md md:mt-4">
+          To provide trusted guidance, transparent admission services, and complete support from counselling to enrollment in reputed government universities Abroad.
         </p>
       </div>
 
-      <div class="glass-panel p-10 rounded-3xl border border-brand-gold/20 bg-brand-muted/20 opacity-0 translate-y-10 about-fade-in">
-        <h2 class="text-3xl font-heading text-brand-gold mb-6">OUR VISION</h2>
-        <p class="text-brand-beige/80 text-lg leading-relaxed font-special italic">
-          "Our mission is to guide students at every step of their study abroad journey from counselling to admission while also providing pre-arrival support with honesty, care, and professionalism. We focus on offering reliable information, affordable solutions, and continuous support to help students study confidently and succeed globally."
-        </p>
+      <!-- Tabs Section -->
+      <div class="flex flex-col lg:flex-row gap-16 relative">
+      
+      <!-- Tabs Sidebar -->
+      <div class="hidden lg:flex w-full lg:w-1/3 flex-col gap-4 sticky top-32 h-fit">
+        <!-- Tab 1 -->
+        <button class="tab-btn active relative w-full text-left px-6 py-5 rounded-xl bg-brand-gold text-[#0a0a0a] font-bold font-heading text-xl flex items-center gap-5" data-target="tab-mission">
+          <span class="tab-num w-8 h-8 rounded-full bg-[#0a0a0a] text-brand-gold flex items-center justify-center text-sm">1</span>
+          Our Mission
+          <div class="tab-pointer absolute -right-[14px] top-1/2 -translate-y-1/2 w-0 h-0 border-y-[24px] border-y-transparent border-l-[15px] border-l-brand-gold block"></div>
+        </button>
+        
+        <!-- Tab 2 -->
+        <button class="tab-btn relative w-full text-left px-6 py-5 rounded-xl bg-white/5 text-white/60 font-bold font-heading text-xl flex items-center gap-5" data-target="tab-vision">
+          <span class="tab-num w-8 h-8 rounded-full bg-white/10 text-white/60 flex items-center justify-center text-sm">2</span>
+          Our Vision
+          <div class="tab-pointer absolute -right-[14px] top-1/2 -translate-y-1/2 w-0 h-0 border-y-[24px] border-y-transparent border-l-[15px] border-l-brand-gold hidden"></div>
+        </button>
+
+        <!-- Tab 3 -->
+        <button class="tab-btn relative w-full text-left px-6 py-5 rounded-xl bg-white/5 text-white/60 font-bold font-heading text-xl flex items-center gap-5" data-target="tab-faq">
+          <span class="tab-num w-8 h-8 rounded-full bg-white/10 text-white/60 flex items-center justify-center text-sm">3</span>
+          FAQ
+          <div class="tab-pointer absolute -right-[14px] top-1/2 -translate-y-1/2 w-0 h-0 border-y-[24px] border-y-transparent border-l-[15px] border-l-brand-gold hidden"></div>
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="w-full lg:w-2/3 flex flex-col gap-32">
+        
+        <!-- Content 1: Mission -->
+        <div id="tab-mission" class="tab-content w-full">
+          <h3 class="text-3xl md:text-5xl font-heading text-white leading-tight mb-6">Guiding students at every step of their study abroad journey.</h3>
+          <p class="text-brand-beige/80 font-special text-base md:text-lg leading-relaxed mb-8">
+            Our mission is to guide students at every step of their study abroad journey from counselling to admission while also providing pre-arrival support with honesty, care, and professionalism. We focus on offering reliable information, affordable solutions, and continuous support to help students study confidently and succeed globally.
+          </p>
+          <div class="w-full h-48 md:h-64 rounded-3xl overflow-hidden bg-brand-muted/30">
+            <img src="/images/mission.jpg" alt="Mission" class="w-full h-full object-cover" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <!-- Content 2: Vision -->
+        <div id="tab-vision" class="tab-content w-full">
+          <h3 class="text-3xl md:text-5xl font-heading text-white leading-tight mb-6">Building a generation of skilled professionals for a stronger India.</h3>
+          <p class="text-brand-beige/80 font-special text-base md:text-lg leading-relaxed mb-8">
+            To be a trusted bridge between students and global education opportunities. We envision a generation of skilled professionals who learn from the best universities worldwide and contribute to building a stronger, educated India.
+          </p>
+          <div class="w-full h-48 md:h-64 rounded-3xl overflow-hidden bg-brand-muted/30">
+            <img src="/images/vision.jpg" alt="Vision" class="w-full h-full object-cover" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <!-- Content 3: FAQ -->
+        <div id="tab-faq" class="tab-content w-full">
+          <h3 class="text-3xl md:text-5xl font-heading text-white leading-tight mb-6">Frequently Asked Questions.</h3>
+          <div class="space-y-6 text-brand-beige/80 font-special mt-8">
+            
+            <div class="border-b border-white/10 pb-4">
+              <h4 class="text-xl text-brand-gold font-heading mb-2">How do I start the application process?</h4>
+              <p class="text-sm md:text-base leading-relaxed text-white/70">Simply contact our counselors. We will evaluate your profile and suggest the best universities tailored to your career goals.</p>
+            </div>
+            
+            <div class="border-b border-white/10 pb-4">
+              <h4 class="text-xl text-brand-gold font-heading mb-2">Do you provide visa assistance?</h4>
+              <p class="text-sm md:text-base leading-relaxed text-white/70">Yes, we provide end-to-end support including documentation, interview preparation, and visa filing.</p>
+            </div>
+
+            <div class="border-b border-white/10 pb-4">
+              <h4 class="text-xl text-brand-gold font-heading mb-2">Is there post-arrival support?</h4>
+              <p class="text-sm md:text-base leading-relaxed text-white/70">Absolutely. We help with accommodation, university registration, and local orientation once you arrive at your destination.</p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -239,10 +314,10 @@ const burstTl = gsap.timeline({
 })
 
 burstTl.from('.collage-left', { x: '15vw', y: '10vh', rotation: 15, scale: 0.8, opacity: 0 }, 0)
-       .from('.collage-right', { x: '-15vw', y: '10vh', rotation: -15, scale: 0.8, opacity: 0 }, 0)
-       .from('.collage-bl', { x: '20vw', y: '-15vh', rotation: 25, scale: 0.6, opacity: 0 }, 0)
-       .from('.collage-br', { x: '-20vw', y: '-15vh', rotation: -25, scale: 0.6, opacity: 0 }, 0)
-       .from('.collage-center', { scale: 0.85, y: '5vh', opacity: 0 }, 0)
+  .from('.collage-right', { x: '-15vw', y: '10vh', rotation: -15, scale: 0.8, opacity: 0 }, 0)
+  .from('.collage-bl', { x: '20vw', y: '-15vh', rotation: 25, scale: 0.6, opacity: 0 }, 0)
+  .from('.collage-br', { x: '-20vw', y: '-15vh', rotation: -25, scale: 0.6, opacity: 0 }, 0)
+  .from('.collage-center', { scale: 0.85, y: '5vh', opacity: 0 }, 0)
 
 const statTl = gsap.timeline({
   scrollTrigger: {
@@ -260,3 +335,55 @@ statTl.from('.stat-item', {
   duration: 1.5,
   ease: 'power3.out'
 })
+
+// Scroll-spy Logic for Tabs
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 1024px)", () => {
+  
+  const activateTab = (targetId: string) => {
+    // Reset all tabs
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      // Deactivate styles
+      gsap.to(b, { backgroundColor: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.6)', duration: 0.3 });
+      
+      const num = b.querySelector('.tab-num');
+      if (num) gsap.to(num, { backgroundColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.6)', duration: 0.3 });
+      
+      const ptr = b.querySelector('.tab-pointer');
+      if (ptr) gsap.to(ptr, { autoAlpha: 0, duration: 0.3 });
+    });
+
+    // Activate the targeted tab
+    const activeBtn = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
+    if (activeBtn) {
+      gsap.to(activeBtn, { backgroundColor: '#C9A65A', color: '#0a0a0a', duration: 0.3 });
+      
+      const activeNum = activeBtn.querySelector('.tab-num');
+      if (activeNum) gsap.to(activeNum, { backgroundColor: '#0a0a0a', color: '#C9A65A', duration: 0.3 });
+      
+      const activePtr = activeBtn.querySelector('.tab-pointer');
+      if (activePtr) {
+        gsap.set(activePtr, { display: 'block' });
+        gsap.to(activePtr, { autoAlpha: 1, duration: 0.3 });
+      }
+    }
+  };
+
+  // Create ScrollTriggers for each content block
+  const sections = ['tab-mission', 'tab-vision', 'tab-faq'];
+  
+  sections.forEach((id) => {
+    ScrollTrigger.create({
+      trigger: `#${id}`,
+      start: 'top 40%', 
+      end: 'bottom 40%',
+      onEnter: () => activateTab(id),
+      onEnterBack: () => activateTab(id),
+    });
+  });
+
+  // Init first tab styling immediately
+  activateTab('tab-mission');
+});
+

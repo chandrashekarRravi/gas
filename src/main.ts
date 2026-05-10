@@ -94,7 +94,7 @@ app.innerHTML = `
           </div>
         </div>
 
-        <!-- Right Side: Locations <div class="w-full lg:w-[45%] flex flex-col mt-8 lg:mt-0 about-locations">
+         <div class="w-full lg:w-[45%] flex flex-col mt-8 lg:mt-0 about-locations">
           <div class="flex items-center gap-3 mb-4 md:mb-6">
             <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             <div>
@@ -117,7 +117,7 @@ app.innerHTML = `
               <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
             </a>
           </div>
-        </div> -->
+        </div> 
         
 
       </div>
@@ -137,36 +137,72 @@ app.innerHTML = `
           </p>
         </div>
 
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-            <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 p-8 flex flex-col justify-end">
-              <p class="font-serif italic text-2xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
-              <div class="text-xs tracking-wider uppercase font-special text-white/60">Sarah Jenkins</div>
-            </div>
-          </div>
+        <!-- Cards Marquee -->
+        <div class="relative w-full overflow-hidden">
+          <!-- Marquee track -->
+          <div class="flex animate-marquee w-max py-4 hover:[animation-play-state:paused]">
+            
+            <!-- Group 1 -->
+            <div class="flex gap-6 shrink-0 pr-6">
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Sarah Jenkins</div>
+                </div>
+              </div>
 
-          <div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-            <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 p-8 flex flex-col justify-end">
-              <p class="font-serif italic text-2xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
-              <div class="text-xs tracking-wider uppercase font-special text-white/60">David Kumar</div>
-            </div>
-          </div>
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">David Kumar</div>
+                </div>
+              </div>
 
-          <div class="relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-            <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-            <div class="absolute inset-0 p-8 flex flex-col justify-end">
-              <p class="font-serif italic text-2xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
-              <div class="text-xs tracking-wider uppercase font-special text-white/60">Aisha Rehman</div>
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Aisha Rehman</div>
+                </div>
+              </div>
             </div>
-          </div>
 
+            <!-- Group 2 (Duplicated Set for Infinite Loop) -->
+            <div class="flex gap-6 shrink-0 pr-6" aria-hidden="true">
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Sarah Jenkins</div>
+                </div>
+              </div>
+
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">David Kumar</div>
+                </div>
+              </div>
+
+              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
+                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Aisha Rehman</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
