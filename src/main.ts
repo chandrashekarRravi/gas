@@ -108,10 +108,10 @@ app.innerHTML = `
               <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Shivamogga</h4>
               <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
             </a>
-            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Mysore." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
+            <!--<a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Mysore." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
               <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Mysore</h4>
               <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
-            </a>
+            </a>-->
             <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Davanagere." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
               <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Davanagere</h4>
               <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
@@ -143,43 +143,43 @@ app.innerHTML = `
           <div class="flex animate-marquee w-max py-4 hover:[animation-play-state:paused]">
             
             <!-- Group 1 -->
-            <div class="flex gap-6 shrink-0 pr-6">
+            <div class="flex gap-6 shrink-0 pr-6 h-100">
               <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+                <!--<div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div> -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <div class="absolute inset-0 p-8 flex flex-col justify-start">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Sarah Jenkins</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Sarah Jenkins</div>
                 </div>
               </div>
 
               <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
                 <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <div class="absolute inset-0 p-8 flex flex-col justify-start">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">David Kumar</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">David Kumar</div>
                 </div>
               </div>
 
               <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
                 <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                <div class="absolute inset-0 p-8 flex flex-col justify-start">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Aisha Rehman</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Aisha Rehman</div>
                 </div>
               </div>
             </div>
 
             <!-- Group 2 (Duplicated Set for Infinite Loop) -->
-            <div class="flex gap-6 shrink-0 pr-6" aria-hidden="true">
+            <div class="flex gap-6 shrink-0 pr-6 h-100" aria-hidden="true">
               <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
                 <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute inset-0 p-8 flex flex-col justify-end">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Sarah Jenkins</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Sarah Jenkins</div>
                 </div>
               </div>
 
@@ -188,7 +188,7 @@ app.innerHTML = `
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute inset-0 p-8 flex flex-col justify-end">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">David Kumar</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">David Kumar</div>
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ app.innerHTML = `
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute inset-0 p-8 flex flex-col justify-end">
                   <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60">Aisha Rehman</div>
+                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Aisha Rehman</div>
                 </div>
               </div>
             </div>
@@ -221,8 +221,8 @@ app.innerHTML = `
         </div>
 
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 md:gap-6 country-grid justify-center">
-          ${['Russia', 'Georgia', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste'].map((country, i) => `
-            <div class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
+          ${['Russia', 'Georgia', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Kyrgyzstan'].map((country, i) => `
+            <div data-country="${country}" class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
                  style="background: linear-gradient(135deg, ${i % 3 === 0 ? '#4A0E17, #1A0407' : i % 3 === 1 ? '#0B291A, #020B05' : '#0A1C3A, #020710'}); box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);">
               
               <!-- Fabric texture overlay -->
@@ -233,10 +233,10 @@ app.innerHTML = `
               
               <div class="text-brand-gold/90 uppercase tracking-[0.15em] text-[8px] md:text-[10px] font-heading text-center mt-2 z-10 w-full px-2" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">${country}</div>
               
-              <div class="w-10 h-10 md:w-14 md:h-14 rounded-full border-[1.5px] border-brand-gold/60 flex items-center justify-center bg-brand-gold/5 z-10 relative">
+              <div class="w-10 h-10 md:w-14 md:h-14 rounded-full border-[1.5px] border-brand-gold/60 flex items-center justify-center bg-brand-gold/5 z-10 relative overflow-hidden">
                 <!-- Inner crest detailing -->
-                <div class="absolute inset-1 rounded-full border-[0.5px] border-brand-gold/30 border-dashed"></div>
-                <svg class="w-5 h-5 md:w-7 md:h-7 text-brand-gold/80" fill="currentColor" viewBox="0 0 24 24" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <div class="absolute inset-1 rounded-full border-[0.5px] border-brand-gold/30 border-dashed z-20 pointer-events-none"></div>
+                <img src="/flags/${country === 'Uzbekistan' ? 'uzbekistan' : country}.png" alt="${country} flag" class="w-full h-full object-cover z-10" />
               </div>
               
               <div class="text-brand-gold/60 uppercase tracking-[0.25em] text-[6px] md:text-[7px] font-special text-center mb-1 z-10" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">PASSPORT</div>
@@ -252,6 +252,17 @@ app.innerHTML = `
         </div>
       </div>
     </section>
+
+    <!-- Country Details Modal -->
+    <div id="country-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 backdrop-blur-md bg-black/80 transition-opacity duration-300 opacity-0">
+      <div class="modal-content bg-brand-navy border border-brand-gold/30 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] w-full max-w-5xl max-h-[90vh] overflow-y-auto relative transform scale-95 opacity-0 transition-all duration-300">
+        <!-- Close Button -->
+        <button id="close-modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div id="modal-body" class="p-6 md:p-10"></div>
+      </div>
+    </div>
 
     <!-- Videos Section -->
     <section id="videos" class="snap-section bg-brand-navy">
@@ -705,3 +716,121 @@ sections.forEach((section: any) => {
   }
 
 })
+
+// Country Data
+const countryData: Record<string, any> = {
+  Georgia: {
+    overview: "Georgia has become a popular destination for studying MBBS due to its European-standard medical of education, English-medium programs, and globally recognized universities. Medical universities in Georgia are approved by NMC (India), WHO, and other international bodies, offering modern infrastructure and strong clinical exposure. The country provides a safe, student-friendly environment with Indian Food and hostel facility available.",
+    reasons: [
+      { title: "NMC & WHO Recognized Universities", desc: "Eligible to practice in India after FMGE/NExT." },
+      { title: "Affordable Tuition Fees", desc: "compared to private medical universities of India." },
+      { title: "Medium of instruction is English", desc: "No language barrier for Indian students." },
+      { title: "No Donation / Capitation Fees.", desc: "" },
+      { title: "American Model of Medical Education", desc: "USMLE integrated Training." },
+      { title: "Safe & Student-Friendly Country", desc: "High safety standards and welcoming culture." }
+    ],
+    universities: [
+      { name: "Batumi Shota Rustaveli State University", founded: "1923", location: "Batumi, Georgia" },
+      { name: "Caucasus's University", founded: "2004", location: "Tbilisi, Georgia" },
+      { name: "Georgian American University", founded: "2001", location: "Tbilisi, Georgia" },
+      { name: "Georgian Avicenna Batumi Medical University", founded: "2022", location: "Batumi, Georgia" },
+      { name: "Georgian National University(SEU)", founded: "2001", location: "Tbilisi, Georgia" },
+      { name: "Tbilisi State Medical University", founded: "1918", location: "Tbilisi, Georgia" }
+    ]
+  }
+};
+
+// Modal Logic
+const modal = document.getElementById('country-modal');
+const modalContent = modal?.querySelector('.modal-content');
+const modalBody = document.getElementById('modal-body');
+const closeBtn = document.getElementById('close-modal');
+
+document.querySelectorAll('.passport-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    const countryName = (e.currentTarget as HTMLElement).dataset.country;
+    if (!countryName || !modal || !modalBody || !modalContent) return;
+
+    const data = countryData[countryName];
+    if (data) {
+      modalBody.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-8 mb-10 mt-4">
+          <div class="md:w-1/3 flex flex-col items-center justify-center bg-[#0A1C3A]/50 rounded-xl p-6 border border-brand-gold/20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0,transparent_70%)]"></div>
+            <img src="/flags/${countryName === 'Uzbekistan' ? 'uzbekistan' : countryName}.png" alt="${countryName} Flag" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full border-[3px] border-brand-gold/50 shadow-[0_0_30px_rgba(212,175,55,0.2)] mb-6 z-10 relative">
+            <h3 class="text-3xl font-heading text-brand-gold text-center z-10 relative tracking-wide uppercase">${countryName}</h3>
+          </div>
+          <div class="md:w-2/3 flex flex-col justify-center">
+            <h4 class="text-3xl font-serif italic text-white/90 mb-5">A Brief Overview of ${countryName}</h4>
+            <p class="text-white/70 font-special leading-relaxed text-sm md:text-base text-justify">
+              ${data.overview}
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <h4 class="text-2xl font-serif italic text-brand-gold mb-6 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-brand-gold/50 block"></span>
+            Reasons to Study in ${countryName}
+            <span class="flex-1 h-[1px] bg-brand-gold/20 block"></span>
+          </h4>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/80 font-special text-sm">
+            ${data.reasons.map((r: any) => `
+              <li class="flex items-start gap-3 bg-white/5 p-4 rounded-lg border border-white/5 hover:border-brand-gold/30 transition-colors">
+                <span class="text-brand-gold mt-1 text-lg">✦</span> 
+                <div><strong class="text-brand-gold/90 font-heading tracking-wide">${r.title}</strong>${r.desc ? ` <span class="text-white/60 block mt-1">${r.desc}</span>` : ''}</div>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-2xl font-serif italic text-brand-gold mb-6 flex items-center gap-3">
+            <span class="w-8 h-[1px] bg-brand-gold/50 block"></span>
+            Top Universities
+            <span class="flex-1 h-[1px] bg-brand-gold/20 block"></span>
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            ${data.universities.map((u: any) => `
+              <div class="bg-black/40 border border-white/10 rounded-xl p-5 hover:border-brand-gold/50 transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)] group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <h5 class="font-heading text-lg text-white mb-3 relative z-10">${u.name}</h5>
+                <p class="text-brand-gold/80 text-xs font-special mb-1 relative z-10 flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-brand-gold"></span> Founded in: ${u.founded}</p>
+                <p class="text-white/50 text-xs font-special relative z-10 flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/50"></span> Located: ${u.location}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else {
+      modalBody.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-20 text-center">
+          <img src="/flags/${countryName === 'Uzbekistan' ? 'uzbekistan' : countryName}.png" alt="${countryName} Flag" class="w-24 h-24 object-cover rounded-full border-2 border-brand-gold/50 opacity-50 mb-6 grayscale">
+          <h3 class="text-2xl font-heading text-brand-gold mb-4 uppercase tracking-wider">${countryName}</h3>
+          <p class="text-white/50 font-special text-lg italic">Detailed information coming soon.</p>
+        </div>
+      `;
+    }
+
+    // Show modal
+    modal.classList.remove('hidden');
+    // Trigger reflow
+    void modal.offsetWidth;
+    modal.classList.remove('opacity-0');
+    modalContent.classList.remove('scale-95', 'opacity-0');
+  });
+});
+
+const closeModal = () => {
+  if (!modal || !modalContent) return;
+  modal.classList.add('opacity-0');
+  modalContent.classList.add('scale-95', 'opacity-0');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+  }, 300);
+};
+
+closeBtn?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
