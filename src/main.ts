@@ -207,6 +207,52 @@ app.innerHTML = `
       </div>
     </section>
 
+    <!-- Why Us Section -->
+    <section id="whyus" class="snap-section bg-[#050505] text-white py-14 min-h-screen flex flex-col justify-center">
+      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-2 gap-8 whyus-header">
+          <div class="max-w-2xl">
+            <h2 class="text-6xl md:text-8xl font-heading leading-none tracking-tighter text-brand-gold uppercase mb-3">
+              Why<br/>Choose <span class="text-white italic font-serif normal-case tracking-normal">US?</span>
+            </h2>
+            <p class="text-white/80 text-xl md:text-2xl font-serif italic max-w-xl leading-relaxed">
+              Focus on increasing admissions, not just visibility
+            </p>
+          </div>
+          <div class="hidden md:block w-32 h-32 border-2 border-brand-gold/30 rounded-full flex items-center justify-center animate-spin-slow">
+            <div class="text-brand-gold text-4xl">✦</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 whyus-grid">
+          ${[
+    { num: '01', title: 'Expertise in school & education marketing' },
+    { num: '02', title: 'Creative content (photos, videos, posts)' },
+    { num: '03', title: 'Complete digital marketing under one roof' },
+    { num: '04', title: 'Strong local audience targeting' },
+    { num: '05', title: 'Regular reports & transparent work' },
+    { num: '06', title: 'Cost-effective solutions' },
+    { num: '07', title: 'Easy communication & quick support' },
+    { num: '08', title: 'Work based on real logic, not just theory' }
+  ].map((item, i) => `
+            <div class="whyus-card group relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all duration-500">
+              <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                  <span class="text-brand-gold font-heading text-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500">${item.num}</span>
+                  <div class="h-[1px] flex-grow bg-brand-gold/20 group-hover:bg-brand-gold/50 transition-all duration-500"></div>
+                </div>
+                <h3 class="text-lg md:text-xl font-heading leading-snug group-hover:text-brand-gold transition-colors duration-500">
+                  ${item.title}
+                </h3>
+              </div>
+              <!-- Decorative corner -->
+              <div class="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500 rounded-br-lg"></div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+
     <!-- Countries Section -->
     <section id="countries" class="snap-section bg-[#0A0E17] text-white py-24 min-h-screen flex flex-col justify-center">
       <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
@@ -264,8 +310,8 @@ app.innerHTML = `
       </div>
     </div>
 
-    <!-- Videos Section -->
-    <section id="videos" class="snap-section bg-brand-navy">
+    <!-- Videos Section
+     <section id="videos" class="snap-section bg-brand-navy">
       <div class="max-w-7xl mx-auto px-6 w-full">
         <h2 class="text-4xl md:text-5xl font-heading mb-16 text-center video-title text-brand-gold">Campus Tours</h2>
         <div class="flex gap-6 overflow-hidden video-carousel">
@@ -281,6 +327,8 @@ app.innerHTML = `
         </div>
       </div>
     </section>
+    -->
+   
 
     <!-- Footer Section -->
     <section id="contact" class="snap-section bg-[#e8e2d8] relative overflow-hidden min-h-screen flex items-center pt-24 pb-12 scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; document.querySelector('.snap-container').scrollTo({top: 0, behavior: 'smooth'})">
@@ -668,6 +716,20 @@ sections.forEach((section: any) => {
     gsap.from(section.querySelectorAll('.testimonial-card'), {
       scrollTrigger: { trigger: section, scroller: '.snap-container', start: 'top 70%', toggleActions: 'play none none reverse' },
       x: 150, opacity: 0, stagger: 0.15, duration: 1.5, ease: 'power4.out'
+    });
+  }
+
+  // Why Us Section
+  if (section.id === 'whyus') {
+    // Header from Left
+    gsap.from(section.querySelector('.whyus-header'), {
+      scrollTrigger: { trigger: section, scroller: '.snap-container', start: 'top 70%', toggleActions: 'play none none reverse' },
+      x: -150, duration: 1.5, ease: 'power4.out'
+    });
+    // Cards from Bottom
+    gsap.from(section.querySelectorAll('.whyus-card'), {
+      scrollTrigger: { trigger: section, scroller: '.snap-container', start: 'top 70%', toggleActions: 'play none none reverse' },
+      y: 100, stagger: 0.1, duration: 1.2, ease: 'power4.out'
     });
   }
 

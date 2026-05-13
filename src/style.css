@@ -167,3 +167,20 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.whyus-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whyus-card:hover {
+  transform: translateY(-10px);
+}
