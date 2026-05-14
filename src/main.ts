@@ -234,7 +234,7 @@ app.innerHTML = `
     { num: '06', title: 'Cost-effective solutions' },
     { num: '07', title: 'Easy communication & quick support' },
     { num: '08', title: 'Work based on real logic, not just theory' }
-  ].map((item, i) => `
+  ].map((item) => `
             <div class="whyus-card group relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all duration-500">
               <div class="flex flex-col gap-6">
                 <div class="flex items-center gap-4">
