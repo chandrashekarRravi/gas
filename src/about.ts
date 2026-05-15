@@ -10,7 +10,7 @@ app.innerHTML = `
   <nav class="nav-header">
     <div class="flex items-center gap-2">
       <a href="/">
-        <img src="/FAAA22.png" alt="Gandharva" style="height: 80px; width: auto; mix-blend-mode: multiply;" />
+        <img src="/logo.png" alt="Gandharva" style="height: 80px; width: auto;" />
       </a>
     </div>
     <div class="flex items-center gap-8 ml-auto">
@@ -307,7 +307,7 @@ app.innerHTML = `
         <div class="col-span-1 md:col-span-3 flex flex-col gap-6">
           <div class="flex items-center gap-3">
             <div class="flex items-center gap-2">
-              <img src="/FAAA22.png" alt="Gandharva" style="height: 48px; width: auto; mix-blend-mode: multiply;" />
+              <img src="/logo.png" alt="Gandharva" style="height: 48px; width: auto;" />
             </div>
             <span class="text-2xl font-heading font-bold text-[#0B1C3D]">Gandharva</span>
           </div>
@@ -321,11 +321,11 @@ app.innerHTML = `
           <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Company</h4>
           <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Achievements</a>
           <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">FAQs</a>
-          <a href="/about" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
+          <a href="/brand.html" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
+          <a href="#contact" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
         </div>
 
-        <!-- Col 3 -->
+        <!-- Col 3: Socials -->
         <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
           <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Socials</h4>
           <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
@@ -345,11 +345,11 @@ app.innerHTML = `
           <div class="flex flex-col gap-4">
             <div>
               <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Head Office</p>
-              <p class="text-sm text-slate-500 font-special leading-relaxed">New Delhi, India</p>
+              <p class="text-sm text-slate-500 font-special leading-relaxed">Shivamogga, India</p>
             </div>
             <div>
               <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Regional Branch</p>
-              <p class="text-sm text-slate-500 font-special leading-relaxed">Bangalore, India</p>
+              <p class="text-sm text-slate-500 font-special leading-relaxed">Davanagere, India</p>
             </div>
           </div>
         </div>
@@ -367,6 +367,34 @@ app.innerHTML = `
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </button>
           </div>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/2 flex flex-col gap-4">
+          <h4 class="font-bold text-[#0B1C3D] font-heading text-2xl flex items-center gap-2">
+            <span>📍</span> Our Location
+          </h4>
+          <p class="text-slate-500 font-special leading-relaxed text-lg">
+            2nd Floor, Sree Karthik Plaza,<br/>
+            Opp. Mallikarjuna Talkies,<br/>
+            Durgigudi, Shivamogga, Karnataka 577201
+          </p>
+          <div class="flex gap-4 mt-2">
+            <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-[#0066FF] font-bold font-heading hover:underline">Get Directions ↗</a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 h-[250px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            style="border:0" 
+            loading="lazy" 
+            allowfullscreen 
+            referrerpolicy="no-referrer-when-downgrade" 
+            src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
+          </iframe>
         </div>
       </div>
 
@@ -428,16 +456,16 @@ statTl.from('.stat-item', {
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 1024px)", () => {
-  
+
   const activateTab = (targetId: string) => {
     // Reset all tabs
     document.querySelectorAll('.tab-btn').forEach(b => {
       // Deactivate styles
       gsap.to(b, { backgroundColor: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.6)', duration: 0.3 });
-      
+
       const num = b.querySelector('.tab-num');
       if (num) gsap.to(num, { backgroundColor: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.6)', duration: 0.3 });
-      
+
       const ptr = b.querySelector('.tab-pointer');
       if (ptr) gsap.to(ptr, { autoAlpha: 0, duration: 0.3 });
     });
@@ -446,10 +474,10 @@ mm.add("(min-width: 1024px)", () => {
     const activeBtn = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
     if (activeBtn) {
       gsap.to(activeBtn, { backgroundColor: '#C9A65A', color: '#0a0a0a', duration: 0.3 });
-      
+
       const activeNum = activeBtn.querySelector('.tab-num');
       if (activeNum) gsap.to(activeNum, { backgroundColor: '#0a0a0a', color: '#C9A65A', duration: 0.3 });
-      
+
       const activePtr = activeBtn.querySelector('.tab-pointer');
       if (activePtr) {
         gsap.set(activePtr, { display: 'block' });
@@ -460,11 +488,11 @@ mm.add("(min-width: 1024px)", () => {
 
   // Create ScrollTriggers for each content block
   const sections = ['tab-mission', 'tab-vision', 'tab-faq'];
-  
+
   sections.forEach((id) => {
     ScrollTrigger.create({
       trigger: `#${id}`,
-      start: 'top 40%', 
+      start: 'top 40%',
       end: 'bottom 40%',
       onEnter: () => activateTab(id),
       onEnterBack: () => activateTab(id),

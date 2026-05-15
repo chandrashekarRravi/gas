@@ -11,7 +11,7 @@ app.innerHTML = `
   <nav class="nav-header">
     <div class="flex items-center gap-2">
       <a href="/">
-        <img src="/FAAA22.png" alt="Gandharva" style="height: 80px; width: auto; mix-blend-mode: multiply;" />
+        <img src="/logo.png" alt="Gandharva" style="height: 80px; width: auto;" />
       </a>
     </div>
     <div class="flex items-center gap-8 ml-auto">
@@ -207,51 +207,7 @@ app.innerHTML = `
       </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section id="whyus" class="snap-section bg-[#050505] text-white py-14 min-h-screen flex flex-col justify-center">
-      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-2 gap-8 whyus-header">
-          <div class="max-w-2xl">
-            <h2 class="text-6xl md:text-8xl font-heading leading-none tracking-tighter text-brand-gold uppercase mb-3">
-              Why<br/>Choose <span class="text-white italic font-serif normal-case tracking-normal">US?</span>
-            </h2>
-            <p class="text-white/80 text-xl md:text-2xl font-serif italic max-w-xl leading-relaxed">
-              Focus on increasing admissions, not just visibility
-            </p>
-          </div>
-          <div class="hidden md:block w-32 h-32 border-2 border-brand-gold/30 rounded-full flex items-center justify-center animate-spin-slow">
-            <div class="text-brand-gold text-4xl">✦</div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 whyus-grid">
-          ${[
-    { num: '01', title: 'Expertise in school & education marketing' },
-    { num: '02', title: 'Creative content (photos, videos, posts)' },
-    { num: '03', title: 'Complete digital marketing under one roof' },
-    { num: '04', title: 'Strong local audience targeting' },
-    { num: '05', title: 'Regular reports & transparent work' },
-    { num: '06', title: 'Cost-effective solutions' },
-    { num: '07', title: 'Easy communication & quick support' },
-    { num: '08', title: 'Work based on real logic, not just theory' }
-  ].map((item) => `
-            <div class="whyus-card group relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all duration-500">
-              <div class="flex flex-col gap-6">
-                <div class="flex items-center gap-4">
-                  <span class="text-brand-gold font-heading text-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500">${item.num}</span>
-                  <div class="h-[1px] flex-grow bg-brand-gold/20 group-hover:bg-brand-gold/50 transition-all duration-500"></div>
-                </div>
-                <h3 class="text-lg md:text-xl font-heading leading-snug group-hover:text-brand-gold transition-colors duration-500">
-                  ${item.title}
-                </h3>
-              </div>
-              <!-- Decorative corner -->
-              <div class="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500 rounded-br-lg"></div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
+   
 
     <!-- Countries Section -->
     <section id="countries" class="snap-section bg-[#0A0E17] text-white py-24 min-h-screen flex flex-col justify-center">
@@ -267,7 +223,7 @@ app.innerHTML = `
         </div>
 
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 md:gap-6 country-grid justify-center">
-          ${['Russia', 'Georgia', 'Uzbekistan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Kyrgyzstan'].map((country, i) => `
+          ${['Russia', 'Georgia', 'Uzbekistan', 'Kazakhstan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Kyrgyzstan'].map((country, i) => `
             <div data-country="${country}" class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
                  style="background: linear-gradient(135deg, ${i % 3 === 0 ? '#4A0E17, #1A0407' : i % 3 === 1 ? '#0B291A, #020B05' : '#0A1C3A, #020710'}); box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);">
               
@@ -329,7 +285,51 @@ app.innerHTML = `
     </section>
     -->
    
+ <!-- Why Us Section -->
+    <section id="whyus" class="snap-section bg-[#050505] text-white py-14 min-h-screen flex flex-col justify-center">
+      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-2 gap-8 whyus-header">
+          <div class="max-w-2xl">
+            <h2 class="text-6xl md:text-8xl font-heading leading-none tracking-tighter text-brand-gold uppercase mb-3">
+              Why<br/>Choose <span class="text-white italic font-serif normal-case tracking-normal">US?</span>
+            </h2>
+            <p class="text-white/80 text-xl md:text-2xl font-serif italic max-w-xl leading-relaxed">
+              Focus on increasing admissions, not just visibility
+            </p>
+          </div>
+          <div class="hidden md:block w-32 h-32 border-2 border-brand-gold/30 rounded-full flex items-center justify-center animate-spin-slow">
+            <div class="text-brand-gold text-4xl">✦</div>
+          </div>
+        </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 whyus-grid">
+          ${[
+    { num: '01', title: 'Expertise in school & education marketing' },
+    { num: '02', title: 'Creative content (photos, videos, posts)' },
+    { num: '03', title: 'Complete digital marketing under one roof' },
+    { num: '04', title: 'Strong local audience targeting' },
+    { num: '05', title: 'Regular reports & transparent work' },
+    { num: '06', title: 'Cost-effective solutions' },
+    { num: '07', title: 'Easy communication & quick support' },
+    { num: '08', title: 'Work based on real logic, not just theory' }
+  ].map((item) => `
+            <div class="whyus-card group relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all duration-500">
+              <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                  <span class="text-brand-gold font-heading text-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500">${item.num}</span>
+                  <div class="h-[1px] flex-grow bg-brand-gold/20 group-hover:bg-brand-gold/50 transition-all duration-500"></div>
+                </div>
+                <h3 class="text-lg md:text-xl font-heading leading-snug group-hover:text-brand-gold transition-colors duration-500">
+                  ${item.title}
+                </h3>
+              </div>
+              <!-- Decorative corner -->
+              <div class="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500 rounded-br-lg"></div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
     <!-- Footer Section -->
     <section id="contact" class="snap-section bg-[#e8e2d8] relative overflow-hidden min-h-screen flex items-center pt-24 pb-12 scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; document.querySelector('.snap-container').scrollTo({top: 0, behavior: 'smooth'})">
       <!-- Watermark Background -->
@@ -352,7 +352,7 @@ app.innerHTML = `
           <div class="col-span-1 md:col-span-3 flex flex-col gap-6">
             <div class="flex items-center gap-3">
               <div class="flex items-center gap-2">
-                <img src="/FAAA22.png" alt="Gandharva" style="height: 48px; width: auto; mix-blend-mode: multiply;" />
+                <img src="/logo.png" alt="Gandharva" style="height: 48px; width: auto; mix-blend-mode: multiply;" />
               </div>
               <span class="text-2xl font-heading font-bold text-[#0B1C3D]">Gandharva</span>
             </div>
@@ -367,11 +367,11 @@ app.innerHTML = `
            
             <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Achievements</a>
             <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">FAQs</a>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
+            <a href="/brand.html" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
+            <a href="#contact" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
           </div>
 
-          <!-- Col 3 -->
+          <!-- Col 3: Socials -->
           <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
             <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Socials</h4>
             <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
@@ -413,6 +413,34 @@ app.innerHTML = `
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </button>
             </div>
+          </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-full md:w-1/2 flex flex-col gap-4">
+            <h4 class="font-bold text-[#0B1C3D] font-heading text-2xl flex items-center gap-2">
+              <span>📍</span> Our Location
+            </h4>
+            <p class="text-slate-500 font-special leading-relaxed text-lg">
+              2nd Floor, Sree Karthik Plaza,<br/>
+              Opp. Mallikarjuna Talkies,<br/>
+              Durgigudi, Shivamogga, Karnataka 577201
+            </p>
+            <div class="flex gap-4 mt-2">
+              <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-[#0066FF] font-bold font-heading hover:underline">Get Directions ↗</a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 h-[250px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              style="border:0" 
+              loading="lazy" 
+              allowfullscreen 
+              referrerpolicy="no-referrer-when-downgrade" 
+              src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
+            </iframe>
           </div>
         </div>
 
@@ -798,6 +826,113 @@ const countryData: Record<string, any> = {
       { name: "Georgian Avicenna Batumi Medical University", founded: "2022", location: "Batumi, Georgia" },
       { name: "Georgian National University(SEU)", founded: "2001", location: "Tbilisi, Georgia" },
       { name: "Tbilisi State Medical University", founded: "1918", location: "Tbilisi, Georgia" }
+    ]
+  },
+  Russia: {
+    overview: "Russia is a world-renowned destination for medical studies, offering high-quality education at an affordable cost. Russian medical universities have a long history of excellence and are recognized by major international bodies like NMC and WHO. Students benefit from advanced laboratories, extensive clinical practice in state hospitals, and a multicultural environment.",
+    reasons: [
+      { title: "Global Recognition", desc: "Degrees are recognized by WHO, NMC (MCI), and major medical councils globally." },
+      { title: "No Entrance Exam", desc: "Direct admission based on high school scores without NEET being mandatory (though recommended)." },
+      { title: "Affordable Tuition & Living", desc: "Subsidized education by the Russian government makes it very cost-effective." },
+      { title: "Advanced Infrastructure", desc: "Modern hospitals and research centers for hands-on clinical training." },
+      { title: "Bilingual Programs", desc: "Many universities offer courses fully in English for international students." }
+    ],
+    universities: [
+      { name: "I.M. Sechenov First Moscow State Medical University", founded: "1758", location: "Moscow, Russia" },
+      { name: "Pirogov Russian National Research Medical University", founded: "1906", location: "Moscow, Russia" },
+      { name: "Kazan Federal University", founded: "1804", location: "Kazan, Russia" },
+      { name: "Saint Petersburg State University", founded: "1724", location: "St. Petersburg, Russia" }
+    ]
+  },
+  Uzbekistan: {
+    overview: "Uzbekistan has recently become a top choice for Indian medical students due to its extremely affordable fee structure and high standards of medical training. The universities provide a safe environment with modern facilities and follow a curriculum that is well-aligned with international standards, making it easier for students to clear licensing exams like NEXT/FMGE.",
+    reasons: [
+      { title: "Extremely Affordable", desc: "One of the most budget-friendly destinations for medical education." },
+      { title: "English Medium", desc: "Full MBBS course taught in English for international students." },
+      { title: "Safe & Welcoming", desc: "A very safe country with a culture that respects international students." },
+      { title: "Indian Food Availability", desc: "Most universities provide Indian mess facilities." }
+    ],
+    universities: [
+      { name: "Tashkent Medical Academy", founded: "1920", location: "Tashkent, Uzbekistan" },
+      { name: "Samarkand State Medical University", founded: "1930", location: "Samarkand, Uzbekistan" },
+      { name: "Bukhara State Medical Institute", founded: "1990", location: "Bukhara, Uzbekistan" }
+    ]
+  },
+  Kazakhstan: {
+    overview: "Kazakhstan has emerged as a popular des na on for Indian students pursuing MBBS abroad due to its affordable fees, quality medical educa on, and universi es recognized by NMC & WHO.The country follows a European educa on system with strong clinical exp osure and well- equipped medical infrastructure.Safe and Student-Friendly Environment.Indian Food & Hostel Facili es available",
+    reasons: [
+    ],
+    universities: [
+      { name: "Al-farabi Kazakh National University", founded: "1934", location: "Almaty, Kazakhstan" },
+      { name: "Kazakh National Medical University", founded: "1931", location: "Almaty, Kazakhstan" },
+      {
+        name: "Semey South Kazakhstan Medical Academy", founded: "1953", location: "Semey, Kazakhstan"
+      }
+    ]
+  },
+  Belarus: {
+    overview: "Belarus is known for its high standards of education and disciplined academic environment. Medical universities here follow European standards and have a strong emphasis on research and clinical training. It offers a peaceful and conducive atmosphere for serious academic pursuits.",
+    reasons: [
+      { title: "European Standards", desc: "Education quality follows the Bologna process and European norms." },
+      { title: "Research Focused", desc: "Extensive opportunities for students to engage in medical research." },
+      { title: "Peaceful Environment", desc: "A very stable and quiet country perfect for focused studying." },
+      { title: "High Literacy Rate", desc: "Benefit from a society that deeply values education." }
+    ],
+    universities: [
+      { name: "Belarusian State Medical University", founded: "1921", location: "Minsk, Belarus" },
+      { name: "Gomel State Medical University", founded: "1990", location: "Gomel, Belarus" },
+      { name: "Vitebsk State Medical University", founded: "1934", location: "Vitebsk, Belarus" }
+    ]
+  },
+  Vietnam: {
+    overview: "Vietnam is an emerging destination for medical education, offering affordable programs with a strong clinical component. The country's medical universities are modernizing rapidly and offer programs in English to cater to the growing international student community.",
+    reasons: [
+      { title: "Strong Clinical Exposure", desc: "Early rotation in hospitals with a large patient volume." },
+      { title: "Affordable Programs", desc: "Low tuition and living costs compared to other Asian destinations." },
+      { title: "Tropical Medicine Focus", desc: "Great exposure to diverse medical cases and tropical diseases." },
+      { title: "Friendly Culture", desc: "Warm and welcoming people with a rich history." }
+    ],
+    universities: [
+      { name: "Hong Bang International University", founded: "1997", location: "Ho Chi Minh City, Vietnam" },
+      { name: "Duy Tan University", founded: "1994", location: "Da Nang, Vietnam" },
+      { name: "Can Tho University of Medicine and Pharmacy", founded: "1979", location: "Can Tho, Vietnam" }
+    ]
+  },
+  Bosnia: {
+    overview: "Bosnia and Herzegovina offers medical education that blends traditional European academic rigor with modern methodologies. Its universities provide programs in English and are gaining recognition for their quality and affordability in the heart of the Balkans.",
+    reasons: [
+      { title: "Central European Location", desc: "Study in a culturally rich environment at the crossroads of Europe." },
+      { title: "Quality Education", desc: "Rigorous academic programs with a focus on core medical sciences." },
+      { title: "Growing Popularity", desc: "Increasingly recognized for its value-for-money education." }
+    ],
+    universities: [
+      { name: "University of Sarajevo", founded: "1949", location: "Sarajevo, Bosnia" },
+      { name: "University of Banja Luka", founded: "1975", location: "Banja Luka, Bosnia" }
+    ]
+  },
+  'Timor-Leste': {
+    overview: "Timor-Leste provides a unique and supportive environment for students looking for a personalized education experience. As a growing nation, it offers opportunities to be part of an evolving healthcare system with a focus on community health and primary care.",
+    reasons: [
+      { title: "Personalized Learning", desc: "Smaller class sizes allow for more direct interaction with faculty." },
+      { title: "Community Focus", desc: "Strong emphasis on primary healthcare and community medicine." },
+      { title: "Affordable Living", desc: "Very low cost of living in a beautiful island nation." }
+    ],
+    universities: [
+      { name: "National University of East Timor", founded: "2000", location: "Dili, Timor-Leste" }
+    ]
+  },
+  Kyrgyzstan: {
+    overview: "Kyrgyzstan has been a favorite destination for Indian medical students for decades. It offers the most affordable medical degrees with a large and active Indian student community. The universities are well-versed in the requirements of Indian licensing exams and provide comprehensive coaching.",
+    reasons: [
+      { title: "Largest Indian Community", desc: "Home to thousands of Indian students, ensuring a home-like feel." },
+      { title: "Highly Affordable", desc: "The most budget-friendly option for MBBS abroad." },
+      { title: "Direct Flights", desc: "Easy accessibility with frequent direct flights from major Indian cities." },
+      { title: "FMGE/NExT Coaching", desc: "Universities provide dedicated support for Indian licensing exams." }
+    ],
+    universities: [
+      { name: "Osh State University", founded: "1939", location: "Osh, Kyrgyzstan" },
+      { name: "Kyrgyz State Medical Academy", founded: "1939", location: "Bishkek, Kyrgyzstan" },
+      { name: "Jalal-Abad State University", founded: "1993", location: "Jalal-Abad, Kyrgyzstan" }
     ]
   }
 };
