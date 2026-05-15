@@ -7,6 +7,24 @@ gsap.registerPlugin(ScrollTrigger)
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block">
+    <div class="cursor-wrapper relative flex items-center justify-center w-6 h-6">
+      <!-- The Plane -->
+      <div class="cursor-plane relative z-10">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter drop-shadow-[0_0_8px_rgba(0,210,255,0.6)]">
+          <path d="M12 2L4 21L12 17L20 21L12 2Z" fill="white" fill-opacity="0.95" />
+          <path d="M12 2L12 17" stroke="#00D2FF" stroke-width="1" stroke-opacity="0.5" />
+          <circle cx="12" cy="19" r="1.5" fill="#00D2FF" class="animate-pulse" />
+        </svg>
+      </div>
+      <!-- Magnetic Bubble -->
+      <div class="cursor-bubble absolute rounded-full border border-white/20 backdrop-blur-md bg-white/5 scale-0 opacity-0 transition-all duration-500 ease-out flex items-center justify-center overflow-hidden">
+        <span class="cursor-text text-[10px] font-heading uppercase tracking-tighter text-white whitespace-nowrap">Explore →</span>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav-header">
     <div class="flex items-center gap-2">
       <a href="/">
@@ -251,3 +269,101 @@ gsap.from('#contact .footer-watermark span', {
   duration: 1.5,
   ease: 'back.out(1.5)'
 });
+
+// Premium Cursor Logic
+const cursor = document.getElementById('custom-cursor');
+const cursorWrapper = cursor?.querySelector('.cursor-wrapper');
+const cursorPlane = cursor?.querySelector('.cursor-plane');
+
+if (cursor && cursorWrapper && cursorPlane) {
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  let velX = 0, velY = 0;
+  let lastX = 0, lastY = 0;
+  let angle = 0;
+  let isMagnetic = false;
+  let magneticTarget: { x: number, y: number } | null = null;
+
+  const setX = gsap.quickSetter(cursor, "x", "px");
+  const setY = gsap.quickSetter(cursor, "y", "px");
+  const setRotate = gsap.quickSetter(cursorPlane, "rotate", "deg");
+  const setSkewX = gsap.quickSetter(cursorPlane, "skewX", "deg");
+  const setScaleY = gsap.quickSetter(cursorPlane, "scaleY");
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, { passive: true });
+
+  const updateCursor = () => {
+    const targetX = isMagnetic && magneticTarget ? magneticTarget.x : mouseX;
+    const targetY = isMagnetic && magneticTarget ? magneticTarget.y : mouseY;
+
+    const dx = targetX - cursorX;
+    const dy = targetY - cursorY;
+
+    cursorX += dx * (isMagnetic ? 0.2 : 0.1);
+    cursorY += dy * (isMagnetic ? 0.2 : 0.1);
+
+    velX = cursorX - lastX;
+    velY = cursorY - lastY;
+
+    setX(cursorX - 12);
+    setY(cursorY - 12);
+
+    if (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05) {
+      const targetAngle = Math.atan2(velY, velX) * (180 / Math.PI) + 90;
+      let angleDiff = targetAngle - angle;
+      if (angleDiff > 180) angleDiff -= 360;
+      if (angleDiff < -180) angleDiff += 360;
+      angle += angleDiff * 0.12;
+      setRotate(angle);
+
+      const speed = Math.sqrt(velX * velX + velY * velY);
+      setSkewX(velX > 0 ? -Math.min(speed * 1.2, 15) : Math.min(speed * 1.2, 15));
+      setScaleY(1 + Math.min(speed * 0.008, 0.15));
+    }
+
+    lastX = cursorX;
+    lastY = cursorY;
+  };
+
+  gsap.ticker.add(updateCursor);
+
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target as HTMLElement;
+    const magElement = target.closest('.brand-card');
+    const actionBtn = target.closest('a, button');
+
+    if (magElement) {
+      cursor.classList.add('cursor-active');
+      isMagnetic = true;
+      const rect = magElement.getBoundingClientRect();
+      magneticTarget = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+    }
+
+    if (actionBtn) {
+      cursor.classList.add('cursor-hover');
+      gsap.to(cursorPlane, { scale: 1.3, duration: 0.3, overwrite: true });
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseout', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('.brand-card')) {
+      cursor.classList.remove('cursor-active');
+      isMagnetic = false;
+      magneticTarget = null;
+    }
+    if (target.closest('a, button')) {
+      cursor.classList.remove('cursor-hover');
+      gsap.to(cursorPlane, { scale: 1, duration: 0.3, overwrite: true });
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => gsap.to(cursor, { opacity: 0, duration: 0.4, overwrite: true }));
+  document.addEventListener('mouseenter', () => gsap.to(cursor, { opacity: 1, duration: 0.4, overwrite: true }));
+}
+
+ScrollTrigger.config({ limitCallbacks: true, ignoreMobileResize: true });
+window.addEventListener('load', () => ScrollTrigger.refresh());

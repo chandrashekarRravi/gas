@@ -8,6 +8,24 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block">
+    <div class="cursor-wrapper relative flex items-center justify-center w-6 h-6">
+      <!-- The Plane -->
+      <div class="cursor-plane relative z-10">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="filter drop-shadow-[0_0_8px_rgba(0,210,255,0.6)]">
+          <path d="M12 2L4 21L12 17L20 21L12 2Z" fill="white" fill-opacity="0.95" />
+          <path d="M12 2L12 17" stroke="#00D2FF" stroke-width="1" stroke-opacity="0.5" />
+          <circle cx="12" cy="19" r="1.5" fill="#00D2FF" class="animate-pulse" />
+        </svg>
+      </div>
+      <!-- Magnetic Bubble -->
+      <div class="cursor-bubble absolute rounded-full border border-white/20 backdrop-blur-md bg-white/5 scale-0 opacity-0 transition-all duration-500 ease-out flex items-center justify-center overflow-hidden">
+        <span class="cursor-text text-[10px] font-heading uppercase tracking-tighter text-white whitespace-nowrap">Explore →</span>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav-header">
     <div class="flex items-center gap-2">
       <a href="/">
@@ -92,34 +110,19 @@ app.innerHTML = `
               <div class="text-brand-beige/80 text-[10px] md:text-[11px] tracking-widest uppercase font-special leading-snug">Satisfied<br/>Students</div>
             </div>
           </div>
+          
         </div>
+      </div>
 
-         <div class="w-full lg:w-[45%] flex flex-col mt-8 lg:mt-0 about-locations">
-          <div class="flex items-center gap-3 mb-4 md:mb-6">
-            <svg class="w-6 h-6 md:w-7 md:h-7 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-            <div>
-              <h3 class="text-xl md:text-2xl font-heading text-brand-gold">Locations of Offices</h3>
-              <p class="text-brand-beige/70 text-xs md:text-sm font-special">We are present globally to assist you in every step.</p>
-            </div>
+      <!-- Bottom Right Office Locations -->
+      <div class="absolute bottom-16 right-12 md:right-24 flex flex-col items-end about-locations z-40">
+        <div class="text-right">
+          <h3 class="text-[10px] md:text-xs font-special uppercase tracking-[0.3em] text-brand-gold/50 mb-3">Our Global Presence</h3>
+          <div class="flex items-center gap-8 md:gap-12">
+            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Shivamogga." target="_blank" class="text-brand-beige hover:text-brand-gold font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Shivamogga</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Davanagere." target="_blank" class="text-brand-beige hover:text-brand-gold font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Davanagere</a>
           </div>
-
-          <div class="grid grid-cols-2 gap-3 md:gap-4 about-cards">
-            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Shivamogga." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
-              <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Shivamogga</h4>
-              <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
-            </a>
-            <!--<a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Mysore." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
-              <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Mysore</h4>
-              <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
-            </a>-->
-            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Davanagere." target="_blank" class="glass-panel p-4 md:p-5 rounded-xl md:rounded-2xl h-24 md:h-32 flex flex-col justify-end transition-all group hover:bg-brand-muted/60 hover:scale-105 backdrop-blur-md whatsapp-cursor">
-              <h4 class="text-lg md:text-xl font-heading text-brand-beige group-hover:text-brand-gold transition-colors">Davanagere</h4>
-              <div class="h-1 w-6 md:w-8 bg-brand-gold mt-2 transition-all group-hover:w-10"></div>
-            </a>
-          </div>
-        </div> 
-        
-
+        </div>
       </div>
     </section>
 
@@ -144,62 +147,54 @@ app.innerHTML = `
             
             <!-- Group 1 -->
             <div class="flex gap-6 shrink-0 pr-6 h-100">
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <!--<div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div> -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-start">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Sarah Jenkins</div>
-                </div>
-              </div>
+              ${[
+    { name: "Sarah Jenkins", yt: "dQw4w9WgXcQ", text: "Gandharva made my MBBS application process seamless and totally stress-free." },
+    { name: "David Kumar", yt: "dQw4w9WgXcQ", text: "Incredible support for visa and accommodation. Highly recommend their services!" },
+    { name: "Aisha Rehman", yt: "dQw4w9WgXcQ", text: "A transparent and trustworthy agency. They helped me get into my dream university." }
+  ].map(t => `
+                <div data-yt="${t.yt}" class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card video-card">
+                  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/${t.yt}/maxresdefault.jpg')"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                  
+                  <!-- Play Button Overlay -->
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform shadow-2xl">
+                      <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
 
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-start">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">David Kumar</div>
+                  <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                    <p class="font-serif italic text-lg md:text-xl text-white mb-4 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-500">"${t.text}"</p>
+                    <div class="text-xs tracking-wider uppercase font-special text-brand-gold text-right">${t.name}</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-start">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Aisha Rehman</div>
-                </div>
-              </div>
+              `).join('')}
             </div>
 
             <!-- Group 2 (Duplicated Set for Infinite Loop) -->
             <div class="flex gap-6 shrink-0 pr-6 h-100" aria-hidden="true">
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Gandharva made my MBBS application process seamless and totally stress-free."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Sarah Jenkins</div>
-                </div>
-              </div>
+               ${[
+    { name: "Sarah Jenkins", yt: "dQw4w9WgXcQ", text: "Gandharva made my MBBS application process seamless and totally stress-free." },
+    { name: "David Kumar", yt: "dQw4w9WgXcQ", text: "Incredible support for visa and accommodation. Highly recommend their services!" },
+    { name: "Aisha Rehman", yt: "dQw4w9WgXcQ", text: "A transparent and trustworthy agency. They helped me get into my dream university." }
+  ].map(t => `
+                <div data-yt="${t.yt}" class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card video-card">
+                  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/${t.yt}/maxresdefault.jpg')"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                  
+                  <!-- Play Button Overlay -->
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform shadow-2xl">
+                      <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
 
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"Incredible support for visa and accommodation. Highly recommend their services!"</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">David Kumar</div>
+                  <div class="absolute inset-0 p-8 flex flex-col justify-end">
+                    <p class="font-serif italic text-lg md:text-xl text-white mb-4 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-500">"${t.text}"</p>
+                    <div class="text-xs tracking-wider uppercase font-special text-brand-gold text-right">${t.name}</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card">
-                <div class="absolute inset-0 bg-[url('/images/test.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                  <p class="font-serif italic text-xl md:text-3xl text-white mb-6 leading-snug">"A transparent and trustworthy agency. They helped me get into my dream university."</p>
-                  <div class="text-xs tracking-wider uppercase font-special text-white/60 text-right mt-auto">Aisha Rehman</div>
-                </div>
-              </div>
+              `).join('')}
             </div>
 
           </div>
@@ -266,24 +261,15 @@ app.innerHTML = `
       </div>
     </div>
 
-    <!-- Videos Section
-     <section id="videos" class="snap-section bg-brand-navy">
-      <div class="max-w-7xl mx-auto px-6 w-full">
-        <h2 class="text-4xl md:text-5xl font-heading mb-16 text-center video-title text-brand-gold">Campus Tours</h2>
-        <div class="flex gap-6 overflow-hidden video-carousel">
-           <div class="min-w-[60vw] md:min-w-[40vw] h-[40vh] glass-panel rounded-3xl flex items-center justify-center cursor-pointer hover:scale-105 transition-transform bg-brand-muted/30">
-              <div class="w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center backdrop-blur-md text-brand-gold text-xl pl-1">▶</div>
-           </div>
-           <div class="min-w-[60vw] md:min-w-[40vw] h-[40vh] glass-panel rounded-3xl flex items-center justify-center cursor-pointer hover:scale-105 transition-transform bg-brand-muted/30">
-              <div class="w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center backdrop-blur-md text-brand-gold text-xl pl-1">▶</div>
-           </div>
-           <div class="min-w-[60vw] md:min-w-[40vw] h-[40vh] glass-panel rounded-3xl flex items-center justify-center cursor-pointer hover:scale-105 transition-transform bg-brand-muted/30">
-              <div class="w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center backdrop-blur-md text-brand-gold text-xl pl-1">▶</div>
-           </div>
-        </div>
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-xl bg-black/90 transition-opacity duration-300 opacity-0">
+      <button id="close-video" class="absolute top-8 right-8 z-10 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-navy transition-all hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="video-container w-full max-w-5xl aspect-video rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(201,166,90,0.2)] border border-white/10 transform scale-95 opacity-0 transition-all duration-500">
+        <iframe id="youtube-iframe" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </section>
-    -->
+    </div>
    
  <!-- Why Us Section -->
     <section id="whyus" class="snap-section bg-[#050505] text-white py-14 min-h-screen flex flex-col justify-center">
@@ -587,7 +573,8 @@ if (routesContainer) {
     duration: 2,
     repeat: -1,
     ease: 'power1.out',
-    transformOrigin: 'center'
+    transformOrigin: 'center',
+    force3D: true
   });
 
   gsap.to('.globe-source', {
@@ -595,7 +582,8 @@ if (routesContainer) {
     duration: 1.5,
     yoyo: true,
     repeat: -1,
-    ease: 'sine.inOut'
+    ease: 'sine.inOut',
+    force3D: true
   });
 
   // Cinematic Sequence Timeline
@@ -813,7 +801,7 @@ const countryData: Record<string, any> = {
     overview: "Georgia has become a popular destination for studying MBBS due to its European-standard medical of education, English-medium programs, and globally recognized universities. Medical universities in Georgia are approved by NMC (India), WHO, and other international bodies, offering modern infrastructure and strong clinical exposure. The country provides a safe, student-friendly environment with Indian Food and hostel facility available.",
     reasons: [
       { title: "NMC & WHO Recognized Universities", desc: "Eligible to practice in India after FMGE/NExT." },
-      { title: "Affordable Tuition Fees", desc: "compared to private medical universities of India." },
+      { title: "Affordable Tuition Fees", desc: "compared to private medical univerisities of India." },
       { title: "Medium of instruction is English", desc: "No language barrier for Indian students." },
       { title: "No Donation / Capitation Fees.", desc: "" },
       { title: "American Model of Medical Education", desc: "USMLE integrated Training." },
@@ -829,23 +817,37 @@ const countryData: Record<string, any> = {
     ]
   },
   Russia: {
-    overview: "Russia is a world-renowned destination for medical studies, offering high-quality education at an affordable cost. Russian medical universities have a long history of excellence and are recognized by major international bodies like NMC and WHO. Students benefit from advanced laboratories, extensive clinical practice in state hospitals, and a multicultural environment.",
+    overview: "Russia is one of the most preferred destinations for pursuing MBBS abroad, offering globally recognized medical education at affordable costs. Russian medical universities are approved by NMC (India) and WHO, with a strong focus on theoretical knowledge and practical clinical training. MBBS programs are taught in English medium, supported by modern infrastructure and experienced faculty.",
     reasons: [
-      { title: "Global Recognition", desc: "Degrees are recognized by WHO, NMC (MCI), and major medical councils globally." },
-      { title: "No Entrance Exam", desc: "Direct admission based on high school scores without NEET being mandatory (though recommended)." },
-      { title: "Affordable Tuition & Living", desc: "Subsidized education by the Russian government makes it very cost-effective." },
-      { title: "Advanced Infrastructure", desc: "Modern hospitals and research centers for hands-on clinical training." },
-      { title: "Bilingual Programs", desc: "Many universities offer courses fully in English for international students." }
+      { title: "Affordable Fees & Living Costs", desc: "compared to other countries." },
+      { title: "NMC & WHO Recognized Universities", desc: "with high academic standards." },
+      { title: "No Donation / Capitation Fee", desc: "" },
+      { title: "English-Medium Education", desc: "with strong clinical exposure." },
+      { title: "Effective FMGE/NExT Coaching", desc: "And student-friendly environment for Indians." }
     ],
     universities: [
-      { name: "I.M. Sechenov First Moscow State Medical University", founded: "1758", location: "Moscow, Russia" },
-      { name: "Pirogov Russian National Research Medical University", founded: "1906", location: "Moscow, Russia" },
-      { name: "Kazan Federal University", founded: "1804", location: "Kazan, Russia" },
-      { name: "Saint Petersburg State University", founded: "1724", location: "St. Petersburg, Russia" }
+      { name: "Altai State Medical University", founded: "1954", location: "Barnaul, Russia" },
+      { name: "Bashkir State Medical University", founded: "1932", location: "Ufa, Russia" },
+      { name: "Chechan State University", founded: "1938", location: "Grozny, Russia" },
+      { name: "Crimean Federal University", founded: "2014", location: "Simferopol, Russia" },
+      { name: "Ingush State University", founded: "1994", location: "Magas, Russia" },
+      { name: "Kabardino Balkarian State University", founded: "1957", location: "Nalchik, Russia" },
+      { name: "Kursk State Medical University", founded: "1934", location: "Kursk, Russia" },
+      { name: "Mari State University", founded: "1972", location: "Yoshkar-Ola, Russia" },
+      { name: "Northwestern State Medical University", founded: "1907", location: "St Petersburg, Russia" },
+      { name: "Orel State Medical University", founded: "1931", location: "Oryol, Russia" },
+      { name: "Orenburg State Medical University", founded: "1944", location: "Orenburg, Oblast, Russia" },
+      { name: "Pskov State Medical University", founded: "2010", location: "Pskov, Russia" },
+      { name: "Petrozavodsk State University", founded: "1940", location: "Petrozavodsk, Russia" },
+      { name: "Syktyvkar State Medical University", founded: "1972", location: "Syktyvkar, Russia" },
+      { name: "Sevastopol State Medical University", founded: "1951", location: "Sevastopol, Russia" },
+      { name: "South Ural State Medical University", founded: "1944", location: "Chelyabinsk, Russia" },
+      { name: "Samara State Medical University", founded: "1930", location: "Samara, Russia" },
+      { name: "Yaroslavl State Medical University", founded: "1944", location: "Yaroslavl, Russia" }
     ]
   },
   Uzbekistan: {
-    overview: "Uzbekistan has recently become a top choice for Indian medical students due to its extremely affordable fee structure and high standards of medical training. The universities provide a safe environment with modern facilities and follow a curriculum that is well-aligned with international standards, making it easier for students to clear licensing exams like NEXT/FMGE.",
+    overview: "Uzbekistan has emerged as one more popular destination for Indian students to study MBBS at affordable fees and quality medical education abroad. universities offers English-medium MBBS programs, modern infrastructure and experienced faculty. Medical universities in Uzbekistan are recognized by NMC (India), WHO, FAIMER, and other international bodies, allowing graduates to appear for FMGE/NExT and pursue higher studies or practice in India and abroad.",
     reasons: [
       { title: "Extremely Affordable", desc: "One of the most budget-friendly destinations for medical education." },
       { title: "English Medium", desc: "Full MBBS course taught in English for international students." },
@@ -853,86 +855,92 @@ const countryData: Record<string, any> = {
       { title: "Indian Food Availability", desc: "Most universities provide Indian mess facilities." }
     ],
     universities: [
-      { name: "Tashkent Medical Academy", founded: "1920", location: "Tashkent, Uzbekistan" },
-      { name: "Samarkand State Medical University", founded: "1930", location: "Samarkand, Uzbekistan" },
-      { name: "Bukhara State Medical Institute", founded: "1990", location: "Bukhara, Uzbekistan" }
+      { name: "Andijan State Medical Institute", founded: "1955", location: "Andijan, Uzbekistan" },
+      { name: "Fergana State University", founded: "1930", location: "Fergana, Uzbekistan" },
+      { name: "Tashkent Medical Academy", founded: "1920", location: "Tashkent, Uzbekistan" }
     ]
   },
   Kazakhstan: {
-    overview: "Kazakhstan has emerged as a popular des na on for Indian students pursuing MBBS abroad due to its affordable fees, quality medical educa on, and universi es recognized by NMC & WHO.The country follows a European educa on system with strong clinical exp osure and well- equipped medical infrastructure.Safe and Student-Friendly Environment.Indian Food & Hostel Facili es available",
+    overview: "Kazakhstan has emerged as a popular destination for Indian students pursuing MBBS abroad due to its affordable fees, quality medical education, and universities recognized by NMC & WHO.The country follows a European education system with strong clinical exposure and well-equipped medical infrastructure. Safe and Student-Friendly Environment. Indian Food & Hostel Facilities available.",
     reasons: [
+      { title: "Affordable Fees", desc: "Quality education at a fraction of the cost." },
+      { title: "NMC & WHO Recognized", desc: "Universities are globally accepted." },
+      { title: "European Education System", desc: "Strong emphasis on clinical and practical training." },
+      { title: "Safe Environment", desc: "Safe and student-friendly atmosphere for international students." },
+      { title: "Indian Food Availability", desc: "Mess facilities providing Indian cuisine." }
     ],
     universities: [
       { name: "Al-farabi Kazakh National University", founded: "1934", location: "Almaty, Kazakhstan" },
-      { name: "Kazakh National Medical University", founded: "1931", location: "Almaty, Kazakhstan" },
-      {
-        name: "Semey South Kazakhstan Medical Academy", founded: "1953", location: "Semey, Kazakhstan"
-      }
+      { name: "Kazakh National Medical Academy", founded: "1931", location: "Almaty, Kazakhstan" },
+      { name: "South Kazakhstan Medical Academy", founded: "1979", location: "Shymkent, Kazakhstan" }
+    ]
+  },
+  Kyrgyzstan: {
+    overview: "Kyrgyzstan as well has become a popular destination for Indian students pursuing MBBS due to its affordable fees, simple admission process, and NMC & WHO recognized universities.Kyrgyzstan follow an European/Russian curriculum with English-medium teaching, making it convenient for foreign students. The country offers a safe and student-friendly environment, with a good number of Indian students already studying there. Universities are equipped with modern laboratories, hospitals for clinical practice.",
+    reasons: [
+      { title: "Simple Admission Process", desc: "Hassle-free enrollment for international students." },
+      { title: "Affordable Fees", desc: "One of the most budget-friendly options for MBBS." },
+      { title: "English-Medium Teaching", desc: "Convenient for students from across the globe." },
+      { title: "Modern Infrastructure", desc: "Equipped with latest laboratories and clinical facilities." },
+      { title: "Safe & Friendly", desc: "A welcoming environment with a large Indian student community." }
+    ],
+    universities: [
+      { name: "International School of Medicine", founded: "2003", location: "Bishkek, Kyrgyzstan" },
+      { name: "Kyrgyz State Medical Academy", founded: "1939", location: "Bishkek, Kyrgyzstan" },
+      { name: "Osh State Medical Academy", founded: "1939", location: "Osh, Kyrgyzstan" }
     ]
   },
   Belarus: {
-    overview: "Belarus is known for its high standards of education and disciplined academic environment. Medical universities here follow European standards and have a strong emphasis on research and clinical training. It offers a peaceful and conducive atmosphere for serious academic pursuits.",
+    overview: "Belarus is a popular destination in Eastern Europe for pursuing MBBS due to European education system and government-supported medical universities. The country has several well-established medical universities that offer English-medium MBBS programs for international students with exhaustive practical and clinical training. provides Well-equipped labs, hospitals, and research facilities. making it affordable for Indian & Asian students.",
     reasons: [
-      { title: "European Standards", desc: "Education quality follows the Bologna process and European norms." },
-      { title: "Research Focused", desc: "Extensive opportunities for students to engage in medical research." },
-      { title: "Peaceful Environment", desc: "A very stable and quiet country perfect for focused studying." },
-      { title: "High Literacy Rate", desc: "Benefit from a society that deeply values education." }
+      { title: "European Education System", desc: "High standards of academic rigor and discipline." },
+      { title: "Government Supported", desc: "Universities are backed by the state, ensuring quality." },
+      { title: "English Medium", desc: "Programs tailored for international students." },
+      { title: "Affordable Living", desc: "Cost-effective lifestyle for students." }
     ],
     universities: [
       { name: "Belarusian State Medical University", founded: "1921", location: "Minsk, Belarus" },
-      { name: "Gomel State Medical University", founded: "1990", location: "Gomel, Belarus" },
+      { name: "Grodno State Medical University", founded: "1958", location: "Grodno, Belarus" },
       { name: "Vitebsk State Medical University", founded: "1934", location: "Vitebsk, Belarus" }
     ]
   },
   Vietnam: {
-    overview: "Vietnam is an emerging destination for medical education, offering affordable programs with a strong clinical component. The country's medical universities are modernizing rapidly and offer programs in English to cater to the growing international student community.",
+    overview: "Vietnam is located in Southeast Asia and has emerged as a preferred destination to Indian students for pursuing MBBS. Vietnamese universities offer affordable tuition fees, English-medium instruction, and are recognized by the NMC and WHO. The country is safe and student-friendly, making it easy for Indian students to adapt. Universities provides integrated coaching on exit exams such as FMGE/NExT, USMLE, and PLAB, enabling them to pursue global medical careers.",
     reasons: [
-      { title: "Strong Clinical Exposure", desc: "Early rotation in hospitals with a large patient volume." },
-      { title: "Affordable Programs", desc: "Low tuition and living costs compared to other Asian destinations." },
-      { title: "Tropical Medicine Focus", desc: "Great exposure to diverse medical cases and tropical diseases." },
-      { title: "Friendly Culture", desc: "Warm and welcoming people with a rich history." }
+      { title: "Affordable Tuition Fees", desc: "Low-cost medical education compared to many countries." },
+      { title: "NMC & WHO Recognized", desc: "Degrees are valid globally." },
+      { title: "Integrated Coaching", desc: "Prep for FMGE/NExT, USMLE, and PLAB included." },
+      { title: "Safe & Friendly", desc: "Easy for international students to adapt and thrive." }
     ],
     universities: [
-      { name: "Hong Bang International University", founded: "1997", location: "Ho Chi Minh City, Vietnam" },
-      { name: "Duy Tan University", founded: "1994", location: "Da Nang, Vietnam" },
-      { name: "Can Tho University of Medicine and Pharmacy", founded: "1979", location: "Can Tho, Vietnam" }
+      { name: "Buon Ma Thout Medical University", founded: "2014", location: "Dak Lak, Vietnam" },
+      { name: "Dai Nam University", founded: "2007", location: "Hanoi, Vietnam" },
+      { name: "Duy Tan University", founded: "1994", location: "Da nang, Vietnam" }
     ]
   },
   Bosnia: {
-    overview: "Bosnia and Herzegovina offers medical education that blends traditional European academic rigor with modern methodologies. Its universities provide programs in English and are gaining recognition for their quality and affordability in the heart of the Balkans.",
+    overview: "Bosnia & Herzegovina is an emerging and affordable destination for international students pursuing MBBS in European Union. The country offers quality medical education, and a European learning environment at comparatively low tuition fees. Bosnia follows European standards and offer English-medium MBBS programs, making it suitable for Indian and international students. The curriculum emphasizes both theoretical knowledge and practical clinical training as well provides integrated coaching on exit exams such as FMGE/NExT, USMLE, and PLAB.",
     reasons: [
-      { title: "Central European Location", desc: "Study in a culturally rich environment at the crossroads of Europe." },
-      { title: "Quality Education", desc: "Rigorous academic programs with a focus on core medical sciences." },
-      { title: "Growing Popularity", desc: "Increasingly recognized for its value-for-money education." }
+      { title: "European Standard", desc: "Education follows the Bologna process and European norms." },
+      { title: "Low Tuition Fees", desc: "Comparatively affordable medical programs." },
+      { title: "English-Medium Programs", desc: "No language barrier for international students." },
+      { title: "Integrated Exam Prep", desc: "Dedicated coaching for global licensing exams." }
     ],
     universities: [
-      { name: "University of Sarajevo", founded: "1949", location: "Sarajevo, Bosnia" },
-      { name: "University of Banja Luka", founded: "1975", location: "Banja Luka, Bosnia" }
+      { name: "University of East Sarajevo", founded: "1992", location: "East Sarajevo, Bosnia" }
     ]
   },
   'Timor-Leste': {
-    overview: "Timor-Leste provides a unique and supportive environment for students looking for a personalized education experience. As a growing nation, it offers opportunities to be part of an evolving healthcare system with a focus on community health and primary care.",
+    overview: "Timor-Leste, also known as East Timor, is a Southeast Asian country located between Indonesia and Australia. It is an emerging destination for medical education, especially for students seeking affordable MBBS options with international exposure. Medical programs are mainly offered in collaboration with international universities. The MBBS/MD curriculum generally follows global standards with a focus on community medicine and primary healthcare.",
     reasons: [
-      { title: "Personalized Learning", desc: "Smaller class sizes allow for more direct interaction with faculty." },
-      { title: "Community Focus", desc: "Strong emphasis on primary healthcare and community medicine." },
-      { title: "Affordable Living", desc: "Very low cost of living in a beautiful island nation." }
+      { title: "International Exposure", desc: "Collaborations with global medical institutions." },
+      { title: "Affordable Options", desc: "Budget-friendly medical degrees." },
+      { title: "Community Health Focus", desc: "Curriculum emphasizing primary healthcare." },
+      { title: "Global Standards", desc: "Education follows international medical norms." }
     ],
     universities: [
-      { name: "National University of East Timor", founded: "2000", location: "Dili, Timor-Leste" }
-    ]
-  },
-  Kyrgyzstan: {
-    overview: "Kyrgyzstan has been a favorite destination for Indian medical students for decades. It offers the most affordable medical degrees with a large and active Indian student community. The universities are well-versed in the requirements of Indian licensing exams and provide comprehensive coaching.",
-    reasons: [
-      { title: "Largest Indian Community", desc: "Home to thousands of Indian students, ensuring a home-like feel." },
-      { title: "Highly Affordable", desc: "The most budget-friendly option for MBBS abroad." },
-      { title: "Direct Flights", desc: "Easy accessibility with frequent direct flights from major Indian cities." },
-      { title: "FMGE/NExT Coaching", desc: "Universities provide dedicated support for Indian licensing exams." }
-    ],
-    universities: [
-      { name: "Osh State University", founded: "1939", location: "Osh, Kyrgyzstan" },
-      { name: "Kyrgyz State Medical Academy", founded: "1939", location: "Bishkek, Kyrgyzstan" },
-      { name: "Jalal-Abad State University", founded: "1993", location: "Jalal-Abad, Kyrgyzstan" }
+      { name: "Timor Leste Medical University", founded: "2021", location: "Dili, Timor Leste" },
+      { name: "University of Peace-Unpaz", founded: "2004", location: "Dili, Timor Leste" }
     ]
   }
 };
@@ -1031,3 +1039,147 @@ closeBtn?.addEventListener('click', closeModal);
 modal?.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
+
+// Video Modal Logic
+const videoModal = document.getElementById('video-modal');
+const videoContainer = videoModal?.querySelector('.video-container');
+const ytIframe = document.getElementById('youtube-iframe') as HTMLIFrameElement;
+const closeVideoBtn = document.getElementById('close-video');
+
+document.querySelectorAll('.video-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const ytId = (card as HTMLElement).dataset.yt;
+    if (!ytId || !videoModal || !videoContainer || !ytIframe) return;
+
+    ytIframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1`;
+
+    videoModal.classList.remove('hidden');
+    void videoModal.offsetWidth;
+    videoModal.classList.add('opacity-100');
+    videoContainer.classList.add('scale-100', 'opacity-100');
+  });
+});
+
+const closeVideoModal = () => {
+  if (!videoModal || !videoContainer || !ytIframe) return;
+  videoModal.classList.remove('opacity-100');
+  videoContainer.classList.remove('scale-100', 'opacity-100');
+  setTimeout(() => {
+    videoModal.classList.add('hidden');
+    ytIframe.src = '';
+  }, 300);
+};
+
+closeVideoBtn?.addEventListener('click', closeVideoModal);
+videoModal?.addEventListener('click', (e) => {
+  if (e.target === videoModal) closeVideoModal();
+});
+
+// Premium Cursor Logic
+const cursor = document.getElementById('custom-cursor');
+const cursorWrapper = cursor?.querySelector('.cursor-wrapper');
+const cursorPlane = cursor?.querySelector('.cursor-plane');
+
+if (cursor && cursorWrapper && cursorPlane) {
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  let velX = 0, velY = 0;
+  let lastX = 0, lastY = 0;
+  let angle = 0;
+  let isMagnetic = false;
+  let magneticTarget: { x: number, y: number } | null = null;
+
+  const setX = gsap.quickSetter(cursor, "x", "px");
+  const setY = gsap.quickSetter(cursor, "y", "px");
+  const setRotate = gsap.quickSetter(cursorPlane, "rotate", "deg");
+  const setSkewX = gsap.quickSetter(cursorPlane, "skewX", "deg");
+  const setScaleY = gsap.quickSetter(cursorPlane, "scaleY");
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, { passive: true });
+
+  const updateCursor = () => {
+    const targetX = isMagnetic && magneticTarget ? magneticTarget.x : mouseX;
+    const targetY = isMagnetic && magneticTarget ? magneticTarget.y : mouseY;
+
+    const dx = targetX - cursorX;
+    const dy = targetY - cursorY;
+
+    cursorX += dx * (isMagnetic ? 0.2 : 0.1);
+    cursorY += dy * (isMagnetic ? 0.2 : 0.1);
+
+    velX = cursorX - lastX;
+    velY = cursorY - lastY;
+
+    setX(cursorX - 12);
+    setY(cursorY - 12);
+
+    if (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05) {
+      const targetAngle = Math.atan2(velY, velX) * (180 / Math.PI) + 90;
+      let angleDiff = targetAngle - angle;
+      if (angleDiff > 180) angleDiff -= 360;
+      if (angleDiff < -180) angleDiff += 360;
+      angle += angleDiff * 0.12;
+      setRotate(angle);
+
+      const speed = Math.sqrt(velX * velX + velY * velY);
+      setSkewX(velX > 0 ? -Math.min(speed * 1.2, 15) : Math.min(speed * 1.2, 15));
+      setScaleY(1 + Math.min(speed * 0.008, 0.15));
+    }
+
+    lastX = cursorX;
+    lastY = cursorY;
+  };
+
+  gsap.ticker.add(updateCursor);
+
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target as HTMLElement;
+    const passportCard = target.closest('.passport-card');
+    const actionBtn = target.closest('a, button, .video-card, .whatsapp-cursor');
+    const earthGlobe = target.closest('.earth-arc');
+
+    if (passportCard) {
+      cursor.classList.add('cursor-active');
+      isMagnetic = true;
+      const rect = passportCard.getBoundingClientRect();
+      magneticTarget = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+      gsap.to('.cursor-text', { opacity: 1, duration: 0.3, y: 0, overwrite: true });
+    }
+
+    if (actionBtn) {
+      cursor.classList.add('cursor-hover');
+      gsap.to(cursorPlane, { scale: 1.3, duration: 0.3, ease: "power2.out", overwrite: true });
+    }
+
+    if (earthGlobe) {
+      cursor.classList.add('cursor-globe');
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseout', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('.passport-card')) {
+      cursor.classList.remove('cursor-active');
+      isMagnetic = false;
+      magneticTarget = null;
+      gsap.to('.cursor-text', { opacity: 0, duration: 0.3, y: 10, overwrite: true });
+    }
+    if (target.closest('a, button, .video-card, .whatsapp-cursor')) {
+      cursor.classList.remove('cursor-hover');
+      gsap.to(cursorPlane, { scale: 1, duration: 0.3, ease: "power2.out", overwrite: true });
+    }
+    if (target.closest('.earth-arc')) {
+      cursor.classList.remove('cursor-globe');
+    }
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => gsap.to(cursor, { opacity: 0, duration: 0.4, overwrite: true }));
+  document.addEventListener('mouseenter', () => gsap.to(cursor, { opacity: 1, duration: 0.4, overwrite: true }));
+}
+
+// Performance Optimizations
+ScrollTrigger.config({ limitCallbacks: true, ignoreMobileResize: true });
+window.addEventListener('load', () => ScrollTrigger.refresh());
