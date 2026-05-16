@@ -255,3 +255,28 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     display: none !important;
   }
 }
+
+/* Clean Premium Testimonials */
+.testimonial-card-clean {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-slide {
+  opacity: 1; /* Always visible in the clean design */
+  transform: none;
+}
+
+.testimonial-track {
+  display: flex;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .testimonial-slide {
+    width: 100% !important;
+  }
+}

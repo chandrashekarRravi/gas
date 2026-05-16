@@ -86,7 +86,7 @@ app.innerHTML = `
         
         <!-- Left Side: Hero Text and Stats -->
         <div class="w-full lg:w-[50%] flex flex-col justify-center about-text">
-          <h1 class="text-5xl md:text-6xl xl:text-7xl font-heading mb-4 text-brand-gold leading-tight">Gandharva <br/><span class="text-brand-beige">Abroad Studies</span></h1>
+          <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold mb-4 text-brand-gold leading-tight">Gandharva <br/><span class="text-brand-beige">Abroad Studies</span></h1>
           <p class="text-brand-beige/80 text-base md:text-lg leading-relaxed font-special mb-8 max-w-2xl">
             Gandharva Abroad Studies specializes in providing comprehensive support and guidance for students aspiring to pursue an MBBS degree abroad. We offer expert counseling, personalized admission assistance, and ensure a smooth transition into top international medical universities.
           </p>
@@ -94,19 +94,19 @@ app.innerHTML = `
           <!-- Stats -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 why-stats">
             <div>
-              <div class="text-3xl md:text-4xl font-heading text-white mb-1">500+</div>
+              <div class="text-3xl md:text-4xl font-heading text-brand-gold mb-1"><span class="stat-number" data-target="500">0</span>+</div>
               <div class="text-brand-beige/80 text-[10px] md:text-[11px] tracking-widest uppercase font-special leading-snug">Successful<br/>Placements</div>
             </div>
             <div>
-              <div class="text-3xl md:text-4xl font-heading text-white mb-1">150+</div>
+              <div class="text-3xl md:text-4xl font-heading text-brand-gold mb-1"><span class="stat-number" data-target="150">0</span>+</div>
               <div class="text-brand-beige/80 text-[10px] md:text-[11px] tracking-widest uppercase font-special leading-snug">Partner<br/>Universities</div>
             </div>
             <div>
-              <div class="text-3xl md:text-4xl font-heading text-white mb-1">20+</div>
+              <div class="text-3xl md:text-4xl font-heading text-brand-gold mb-1"><span class="stat-number" data-target="20">0</span>+</div>
               <div class="text-brand-beige/80 text-[10px] md:text-[11px] tracking-widest uppercase font-special leading-snug">Countries<br/>Worldwide</div>
             </div>
             <div>
-              <div class="text-3xl md:text-4xl font-heading text-white mb-1">98%</div>
+              <div class="text-3xl md:text-4xl font-heading text-brand-gold mb-1"><span class="stat-number" data-target="98">0</span>%</div>
               <div class="text-brand-beige/80 text-[10px] md:text-[11px] tracking-widest uppercase font-special leading-snug">Satisfied<br/>Students</div>
             </div>
           </div>
@@ -115,89 +115,86 @@ app.innerHTML = `
       </div>
 
       <!-- Bottom Right Office Locations -->
-      <div class="absolute bottom-16 right-12 md:right-24 flex flex-col items-end about-locations z-40">
+      <div class="absolute bottom-16 left-16 md:left-24 flex flex-col items-end about-locations z-40">
         <div class="text-right">
-          <h3 class="text-[10px] md:text-xs font-special uppercase tracking-[0.3em] text-brand-gold/50 mb-3">Our Global Presence</h3>
+          <h3 class="text-[10px] md:text-xs font-special uppercase tracking-[0.3em] text-brand-beige mb-3">Our Global Presence</h3>
           <div class="flex items-center gap-8 md:gap-12">
-            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Shivamogga." target="_blank" class="text-brand-beige hover:text-brand-gold font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Shivamogga</a>
-            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Davanagere." target="_blank" class="text-brand-beige hover:text-brand-gold font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Davanagere</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Shivamogga." target="_blank" class="text-brand-gold hover:text-brand-beige font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Shivamogga</a>
+            <a href="https://wa.me/919876543210?text=Hello%20Gandharva%20Abroad%20Studies,%20I%20would%20like%20to%20know%20more%20about%20your%20services%20in%20Davanagere." target="_blank" class="text-brand-gold hover:text-brand-beige font-heading text-sm md:text-lg transition-all hover:-translate-y-1 whatsapp-cursor">Davanagere</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="snap-section bg-[#050505] text-white py-24 min-h-screen flex items-center">
-      <div class="max-w-[85rem] mx-auto px-6 w-full">
+    <section id="testimonials" class="snap-section bg-[#FDFBF9] text-[#1A1A1A] py-20 flex items-center overflow-hidden">
+      <div class="max-w-[90rem] mx-auto px-6 w-full">
         <!-- Header -->
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 testimonial-title">
-          <h2 class="text-5xl md:text-7xl font-heading leading-tight tracking-wide">
-            Recommended<br/>
-            <span class="font-serif italic text-white/80 text-4xl md:text-6xl normal-case">by our students</span>
+        <div class="text-center mb-16 testimonial-title">
+          <h3 class="text-[10px] font-special uppercase tracking-[0.4em] text-slate-400 mb-4">Customer Reviews</h3>
+          <h2 class="text-4xl md:text-6xl font-heading leading-[1.1] tracking-tight max-w-4xl mx-auto">
+            What our <span class="italic font-serif font-normal">students</span> say about us
           </h2>
-          <p class="text-white/50 max-w-sm text-sm md:text-base leading-relaxed font-special pb-2">
-            Hear from our successful placements who have seamlessly transitioned into top international medical universities with our expert guidance.
-          </p>
         </div>
 
-        <!-- Cards Marquee -->
-        <div class="relative w-full overflow-hidden">
-          <!-- Marquee track -->
-          <div class="flex animate-marquee w-max py-4 hover:[animation-play-state:paused]">
-            
-            <!-- Group 1 -->
-            <div class="flex gap-6 shrink-0 pr-6 h-100">
+        <!-- New Premium Carousel Testimonials -->
+        <div class="relative w-full testimonial-carousel-wrapper">
+          <div class="testimonial-carousel-container relative overflow-hidden">
+            <div class="testimonial-track flex flex-nowrap w-max will-change-transform">
               ${[
-    { name: "Sarah Jenkins", yt: "dQw4w9WgXcQ", text: "Gandharva made my MBBS application process seamless and totally stress-free." },
-    { name: "David Kumar", yt: "dQw4w9WgXcQ", text: "Incredible support for visa and accommodation. Highly recommend their services!" },
-    { name: "Aisha Rehman", yt: "dQw4w9WgXcQ", text: "A transparent and trustworthy agency. They helped me get into my dream university." }
-  ].map(t => `
-                <div data-yt="${t.yt}" class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card video-card">
-                  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/${t.yt}/maxresdefault.jpg')"></div>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                  
-                  <!-- Play Button Overlay -->
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-16 h-16 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform shadow-2xl">
-                      <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    { name: "Sneha H S", country: "Russia", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200", text: "After visiting many consultancies, I chose Gandharva and it was the right decision. They explained the MBBS abroad process clearly & supported me at every step. The team handled everything smoothly and was always there for my questions. I'm truly thankful for their guidance and support." },
+    { name: "Arun Kumar", country: "Russia", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200", text: "My experience with Gandharva was smooth and stress-free. The team guided me well in choosing the right university and explained everything clearly. They answered all my doubts quickly and managed the process in an organized way. I truly appreciate their support." },
+    { name: "Sadhana V S", country: "Russia", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200", text: "I approached Gandharva with very little knowledge about studying abroad. They helped me understand everything step by step. Their guidance made the process very easy to follow. All the formalities were completed without any confusion. The team was supportive and patient throughout." },
+    { name: "Yogesh Nayak", country: "Russia", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200", text: "Gandharva provided complete support during my admission process. They guided me in selecting the right option based on my needs. Every step was clearly explained and well managed. Documentation was handled properly without mistakes. Their team was always ready to help." },
+    { name: "Vikram G", country: "Russia", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200", text: "I had a smooth experience with Gandharva from counseling to admission. They gave clear information at every stage. Their team helped me understand all the details properly. I did not feel confused at any point. The process was handled professionally. Their support made things easy." },
+    { name: "Adarsh", country: "Georgia", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200&h=200", text: "Choosing Gandharva was a good decision for my career. They guided me in the right direction from the start. Every step was explained clearly and simply. Their team handled all procedures with care. I received support whenever I needed it. The entire journey was smooth." },
+    { name: "Vinodh", country: "Georgia", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200", text: "I am really thankful to Gandharva for their support. They helped me understand the admission process clearly. The team guided me at every stage patiently. All my doubts were answered on time. The process was well organized and easy. I felt confident throughout my journey." },
+    { name: "Samrudh V Gowda", country: "Georgia", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200&h=200", text: "Gandharva made my admission process very simple. They guided me properly from the beginning. Everything was explained in a clear way. Their team handled all the steps smoothly. I did not face any difficulties. Their support was very helpful for me. I truly appreciate their work." },
+    { name: "Ullas G N", country: "Russia", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200", text: "I had a positive experience with Gandharva. They helped me choose the right path for my studies. The process was explained clearly step by step. All the work was handled without confusion. Their team was supportive and responsive. I felt comfortable trusting them." },
+    { name: "Pavan", country: "Uzbekistan", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200", text: "Gandharva provided me with clear and honest guidance. They helped me understand all my options. The admission process was handled smoothly. Their team supported me at every stage. I did not face any issues. Everything was well managed. I am thankful for their support." }
+  ].map((t) => `
+                <div class="testimonial-slide w-[100vw] md:w-[30rem] flex-shrink-0 px-3">
+                  <div class="testimonial-card-clean h-full bg-[#FAFAFA] rounded-xl p-8 md:p-10 flex flex-col justify-between relative group border border-black/5 shadow-sm hover:shadow-md transition-all duration-500">
+                    <!-- Quote Icon (Top Right) -->
+                    <div class="absolute top-10 right-10 opacity-[0.08] pointer-events-none">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-black">
+                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91239 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V12C1.017 12.5523 0.569282 13 0.017 13H-1.983C-2.53528 13 -3.017 12.5523 -3.017 12V9C-3.017 6.79086 -1.22614 5 1.017 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33072 21 4.017 21H1.017Z"/>
+                      </svg>
                     </div>
-                  </div>
 
-                  <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                    <p class="font-serif italic text-lg md:text-xl text-white mb-4 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-500">"${t.text}"</p>
-                    <div class="text-xs tracking-wider uppercase font-special text-brand-gold text-right">${t.name}</div>
+                    <div class="space-y-6">
+                      <p class="text-[#333333] text-[14px] md:text-[16px] leading-[1.6] font-normal">
+                        ${t.text}
+                      </p>
+                    </div>
+
+                    <div class="flex items-center gap-4 mt-10">
+                      <div class="w-12 h-12 rounded-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover" />
+                      </div>
+                      <div class="flex flex-col">
+                        <h4 class="font-heading font-bold text-[#1A1A1A] text-sm md:text-base leading-tight">${t.name}</h4>
+                        <p class="text-[10px] font-special uppercase tracking-widest text-slate-400 mt-1">${t.country}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               `).join('')}
             </div>
-
-            <!-- Group 2 (Duplicated Set for Infinite Loop) -->
-            <div class="flex gap-6 shrink-0 pr-6 h-100" aria-hidden="true">
-               ${[
-    { name: "Sarah Jenkins", yt: "dQw4w9WgXcQ", text: "Gandharva made my MBBS application process seamless and totally stress-free." },
-    { name: "David Kumar", yt: "dQw4w9WgXcQ", text: "Incredible support for visa and accommodation. Highly recommend their services!" },
-    { name: "Aisha Rehman", yt: "dQw4w9WgXcQ", text: "A transparent and trustworthy agency. They helped me get into my dream university." }
-  ].map(t => `
-                <div data-yt="${t.yt}" class="w-[280px] md:w-[380px] shrink-0 relative rounded-xl overflow-hidden aspect-[3/4] group cursor-pointer border border-white/10 testimonial-card video-card">
-                  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://img.youtube.com/vi/${t.yt}/maxresdefault.jpg')"></div>
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-                  
-                  <!-- Play Button Overlay -->
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-16 h-16 rounded-full bg-brand-gold/20 backdrop-blur-md border border-brand-gold/40 flex items-center justify-center text-brand-gold group-hover:scale-110 transition-transform shadow-2xl">
-                      <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                  </div>
-
-                  <div class="absolute inset-0 p-8 flex flex-col justify-end">
-                    <p class="font-serif italic text-lg md:text-xl text-white mb-4 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-500">"${t.text}"</p>
-                    <div class="text-xs tracking-wider uppercase font-special text-brand-gold text-right">${t.name}</div>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
-
           </div>
+
+          <!-- Navigation Buttons -->
+          <div class="absolute top-1/2 -translate-y-1/2 -left-4 -right-4 flex justify-between z-20 pointer-events-none hidden md:flex">
+            <button id="prevTestimonial" class="w-12 h-12 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-navy hover:scale-110 transition-all pointer-events-auto">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button id="nextTestimonial" class="w-12 h-12 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-navy hover:scale-110 transition-all pointer-events-auto">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Dots -->
+          <div class="flex justify-center gap-2 mt-12" id="testimonialDots"></div>
         </div>
       </div>
     </section>
@@ -465,6 +462,19 @@ tl.from('.about-locations', {
   ease: 'power4.out'
 }, 0);
 
+// Stats counter animation
+const stats = document.querySelectorAll('.stat-number');
+stats.forEach(stat => {
+  const el = stat as HTMLElement;
+  const target = parseInt(el.getAttribute('data-target') || '0');
+  tl.to(el, {
+    innerText: target,
+    duration: 2.5,
+    snap: { innerText: 1 },
+    ease: 'power4.out'
+  }, 0.5); // Start slightly after the main text begins to appear
+});
+
 // Earth globe subtle scale in
 tl.from('.earth-arc', {
   scale: 0.8,
@@ -475,7 +485,7 @@ tl.from('.earth-arc', {
 
 // Make the globe rotation much slower for a premium feel
 gsap.to('.earth-arc', {
-  rotation: 360,
+  rotation: 90,
   duration: 150, // Slower rotation
   repeat: -1,
   ease: 'linear'
@@ -1178,6 +1188,128 @@ if (cursor && cursorWrapper && cursorPlane) {
 
   document.addEventListener('mouseleave', () => gsap.to(cursor, { opacity: 0, duration: 0.4, overwrite: true }));
   document.addEventListener('mouseenter', () => gsap.to(cursor, { opacity: 1, duration: 0.4, overwrite: true }));
+}
+
+// Testimonial Carousel Logic
+function initTestimonials() {
+  const testimonialTrack = document.querySelector('.testimonial-track') as HTMLElement;
+  const testimonialDots = document.getElementById('testimonialDots');
+  const prevBtn = document.getElementById('prevTestimonial');
+  const nextBtn = document.getElementById('nextTestimonial');
+  
+  if (!testimonialTrack) return;
+  
+  // Query slides INSIDE the function to ensure they are found after render
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  let currentSlide = 0;
+  let isAnimating = false;
+
+  const getCardsPerView = () => window.innerWidth < 768 ? 1 : 3;
+
+  const generateDots = () => {
+    if (testimonialDots) {
+      const cardsPerView = getCardsPerView();
+      const dotCount = Math.max(1, testimonialSlides.length - cardsPerView + 1);
+      testimonialDots.innerHTML = Array.from({ length: dotCount }).map((_, i) => `
+        <button class="w-2.5 h-2.5 rounded-full transition-all duration-300 bg-slate-300 hover:bg-slate-400" data-index="${i}"></button>
+      `).join('');
+      updateDotState();
+    }
+  };
+
+  const updateDotState = () => {
+    const dots = testimonialDots?.querySelectorAll('button');
+    dots?.forEach((dot) => {
+      const idx = parseInt(dot.getAttribute('data-index') || '0');
+      if (idx === currentSlide) {
+        dot.classList.add('bg-brand-navy', 'w-6');
+        dot.classList.remove('bg-slate-300', 'w-2.5');
+      } else {
+        dot.classList.remove('bg-brand-navy', 'w-6');
+        dot.classList.add('bg-slate-300', 'w-2.5');
+      }
+    });
+  };
+
+  const updateCarousel = (immediate = false) => {
+    // xPercent is based on track's own width. 
+    // Each slide is 1/N of the track.
+    const stepPercent = 100 / testimonialSlides.length;
+    
+    gsap.to(testimonialTrack, {
+      xPercent: -currentSlide * stepPercent,
+      duration: immediate ? 0 : 0.8,
+      ease: 'expo.out',
+      overwrite: 'auto',
+      onStart: () => { isAnimating = true; },
+      onComplete: () => { isAnimating = false; }
+    });
+
+    updateDotState();
+  };
+
+  nextBtn?.addEventListener('click', () => {
+    if (isAnimating) return;
+    const cardsPerView = getCardsPerView();
+    if (currentSlide < testimonialSlides.length - cardsPerView) {
+      currentSlide++;
+    } else {
+      currentSlide = 0;
+    }
+    updateCarousel();
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    if (isAnimating) return;
+    const cardsPerView = getCardsPerView();
+    if (currentSlide > 0) {
+      currentSlide--;
+    } else {
+      currentSlide = testimonialSlides.length - cardsPerView;
+    }
+    updateCarousel();
+  });
+
+  testimonialDots?.addEventListener('click', (e) => {
+    const dot = e.target as HTMLElement;
+    if (dot.tagName === 'BUTTON' && !isAnimating) {
+      currentSlide = parseInt(dot.getAttribute('data-index') || '0');
+      updateCarousel();
+    }
+  });
+
+  // Auto play
+  let autoPlay = setInterval(() => {
+    if (document.visibilityState === 'visible' && !isAnimating) {
+      const cardsPerView = getCardsPerView();
+      if (currentSlide < testimonialSlides.length - cardsPerView) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      updateCarousel();
+    }
+  }, 5000);
+
+  window.addEventListener('resize', () => {
+    const cardsPerView = getCardsPerView();
+    if (currentSlide > testimonialSlides.length - cardsPerView) {
+      currentSlide = Math.max(0, testimonialSlides.length - cardsPerView);
+    }
+    generateDots();
+    updateCarousel(true);
+  });
+
+  // Initial
+  generateDots();
+  updateCarousel(true);
+}
+
+// Call initialization
+window.addEventListener('DOMContentLoaded', initTestimonials);
+// Also call immediately just in case DOM is already ready
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  initTestimonials();
 }
 
 // Performance Optimizations
