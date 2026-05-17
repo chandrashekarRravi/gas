@@ -53,7 +53,7 @@ app.innerHTML = `
 
   <div class="snap-container">
     <!-- Hero / About Section -->
-    <section id="about" class="snap-section about-section bg-brand-navy relative overflow-hidden min-h-screen pt-28 pb-12 flex items-center">
+    <section id="about" class="snap-section about-section bg-[#0B1B3D] relative overflow-hidden min-h-screen pt-28 pb-12 flex items-center">
       <!-- Background Earth Globe Effects -->
       <div class="hero-glow"></div>
       <div class="earth-arc">
@@ -127,7 +127,7 @@ app.innerHTML = `
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="snap-section bg-[#FDFBF9] text-[#1A1A1A] py-20 flex items-center overflow-hidden">
+    <section id="testimonials" class="snap-section bg-[#0B1B3D] text-brand-beige py-20 flex items-center overflow-hidden">
       <div class="max-w-[90rem] mx-auto px-6 w-full">
         <!-- Header -->
         <div class="text-center mb-16 testimonial-title">
@@ -154,16 +154,16 @@ app.innerHTML = `
     { name: "Pavan", country: "Uzbekistan", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200&h=200", text: "Gandharva provided me with clear and honest guidance. They helped me understand all my options. The admission process was handled smoothly. Their team supported me at every stage. I did not face any issues. Everything was well managed. I am thankful for their support." }
   ].map((t) => `
                 <div class="testimonial-slide w-[100vw] md:w-[30rem] flex-shrink-0 px-3">
-                  <div class="testimonial-card-clean h-full bg-[#FAFAFA] rounded-xl p-8 md:p-10 flex flex-col justify-between relative group border border-black/5 shadow-sm hover:shadow-md transition-all duration-500">
+                  <div class="testimonial-card-clean h-full bg-[#0B1B3D] rounded-xl p-8 md:p-10 flex flex-col justify-between relative group border border-brand-gold/10 shadow-sm hover:shadow-[0_0_15px_rgba(203,167,91,0.2)] transition-all duration-500">
                     <!-- Quote Icon (Top Right) -->
-                    <div class="absolute top-10 right-10 opacity-[0.08] pointer-events-none">
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-black">
+                    <div class="absolute top-10 right-10 opacity-10 pointer-events-none">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-brand-gold">
                         <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91239 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V12C1.017 12.5523 0.569282 13 0.017 13H-1.983C-2.53528 13 -3.017 12.5523 -3.017 12V9C-3.017 6.79086 -1.22614 5 1.017 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33072 21 4.017 21H1.017Z"/>
                       </svg>
                     </div>
 
                     <div class="space-y-6">
-                      <p class="text-[#333333] text-[14px] md:text-[16px] leading-[1.6] font-normal">
+                      <p class="text-brand-beige/80 text-[14px] md:text-[16px] leading-[1.6] font-normal">
                         ${t.text}
                       </p>
                     </div>
@@ -173,7 +173,7 @@ app.innerHTML = `
                         <img src="${t.img}" alt="${t.name}" class="w-full h-full object-cover" />
                       </div>
                       <div class="flex flex-col">
-                        <h4 class="font-heading font-bold text-[#1A1A1A] text-sm md:text-base leading-tight">${t.name}</h4>
+                        <h4 class="font-heading font-bold text-brand-gold text-sm md:text-base leading-tight">${t.name}</h4>
                         <p class="text-[10px] font-special uppercase tracking-widest text-slate-400 mt-1">${t.country}</p>
                       </div>
                     </div>
@@ -185,10 +185,10 @@ app.innerHTML = `
 
           <!-- Navigation Buttons -->
           <div class="absolute top-1/2 -translate-y-1/2 -left-4 -right-4 flex justify-between z-20 pointer-events-none hidden md:flex">
-            <button id="prevTestimonial" class="w-12 h-12 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-navy hover:scale-110 transition-all pointer-events-auto">
+            <button id="prevTestimonial" class="w-12 h-12 rounded-full bg-[#0B1B3D] shadow-[0_0_15px_rgba(203,167,91,0.2)] border border-brand-gold/30 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-[#0B1B3D] hover:scale-110 transition-all pointer-events-auto">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
             </button>
-            <button id="nextTestimonial" class="w-12 h-12 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-navy hover:scale-110 transition-all pointer-events-auto">
+            <button id="nextTestimonial" class="w-12 h-12 rounded-full bg-[#0B1B3D] shadow-[0_0_15px_rgba(203,167,91,0.2)] border border-brand-gold/30 flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-[#0B1B3D] hover:scale-110 transition-all pointer-events-auto">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
           </div>
@@ -199,50 +199,66 @@ app.innerHTML = `
       </div>
     </section>
 
-   
+    <!-- Study Destinations Section -->
+    <section id="countries" class="snap-section bg-[#0B1B3D] text-white py-32 min-h-screen flex flex-col justify-center relative overflow-hidden">
+      <!-- Cinematic Background Elements -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="world-grid-bg absolute inset-0 opacity-10"></div>
+        <div class="cinematic-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(201,166,90,0.05)_0%,transparent_70%)]"></div>
+        <div id="particles-container" class="absolute inset-0"></div>
+      </div>
 
-    <!-- Countries Section -->
-    <section id="countries" class="snap-section bg-[#0A0E17] text-white py-24 min-h-screen flex flex-col justify-center">
-      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-8 country-title">
-          <h2 class="text-5xl md:text-7xl font-heading leading-tight tracking-wide text-brand-gold">
-            Study<br/>
-            <span class="font-serif italic text-white/80 text-4xl md:text-6xl normal-case">Destinations</span>
+      <div class="max-w-[90rem] mx-auto px-6 w-full relative z-10">
+        <div class="text-center mb-20 country-title">
+          <h3 class="text-[10px] font-special uppercase tracking-[0.5em] text-brand-gold/60 mb-6">Explore the World</h3>
+          <h2 class="text-4xl md:text-5xl font-heading leading-[1.2] tracking-tight uppercase">
+            Study Abroad<br/>
+            <span class="font-serif italic text-brand-gold normal-case tracking-normal">Destinations</span>
           </h2>
-          <p class="text-white/50 max-w-sm text-sm md:text-base leading-relaxed font-special pb-2">
-            Explore our extensive network of partner universities across these beautiful countries, offering world-class medical education.
-          </p>
         </div>
 
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-4 md:gap-6 country-grid justify-center">
-          ${['Russia', 'Georgia', 'Uzbekistan', 'Kazakhstan', 'Belarus', 'Vietnam', 'Bosnia', 'Timor-Leste', 'Kyrgyzstan'].map((country, i) => `
-            <div data-country="${country}" class="passport-card group cursor-pointer relative aspect-[3/4] min-h-[120px] rounded-md shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105 border border-brand-gold/30 flex flex-col items-center justify-between p-3 md:p-4 overflow-hidden"
-                 style="background: linear-gradient(135deg, ${i % 3 === 0 ? '#4A0E17, #1A0407' : i % 3 === 1 ? '#0B291A, #020B05' : '#0A1C3A, #020710'}); box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);">
-              
-              <!-- Fabric texture overlay -->
-              <div class="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
-              
-              <!-- Spine detailing -->
-              <div class="absolute left-0 top-0 bottom-0 w-2 bg-black/40 border-r border-brand-gold/10"></div>
-              
-              <div class="text-brand-gold/90 uppercase tracking-[0.15em] text-[8px] md:text-[10px] font-heading text-center mt-2 z-10 w-full px-2" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">${country}</div>
-              
-              <div class="w-10 h-10 md:w-14 md:h-14 rounded-full border-[1.5px] border-brand-gold/60 flex items-center justify-center bg-brand-gold/5 z-10 relative overflow-hidden">
-                <!-- Inner crest detailing -->
-                <div class="absolute inset-1 rounded-full border-[0.5px] border-brand-gold/30 border-dashed z-20 pointer-events-none"></div>
-                <img src="/flags/${country === 'Uzbekistan' ? 'uzbekistan' : country}.png" alt="${country} flag" class="w-full h-full object-cover z-10" />
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 lg:gap-8 country-grid perspective-1000">
+          ${[
+    { id: 'russia', name: 'Russia', colors: 'from-[#4A0E17] via-[#1A0407] to-black', glow: 'rgba(255, 60, 60, 0.3)', secondary: '#C9A65A' },
+    { id: 'georgia', name: 'Georgia', colors: 'from-[#0B291A] via-[#020B05] to-black', glow: 'rgba(16, 185, 129, 0.3)', secondary: '#F5F5F5' },
+    { id: 'uzbekistan', name: 'Uzbekistan', colors: 'from-[#0A1C3A] via-[#020710] to-black', glow: 'rgba(59, 130, 246, 0.3)', secondary: '#22D3EE' },
+    { id: 'kazakhstan', name: 'Kazakhstan', colors: 'from-[#3D0A1C] via-[#0D0206] to-black', glow: 'rgba(159, 18, 57, 0.3)', secondary: '#14B8A6' },
+    { id: 'belarus', name: 'Belarus', colors: 'from-[#143D1A] via-[#050D06] to-black', glow: 'rgba(34, 197, 94, 0.3)', secondary: '#E11D48' },
+    { id: 'vietnam', name: 'Vietnam', colors: 'from-[#0A0E17] via-[#05070D] to-black', glow: 'rgba(201, 166, 90, 0.2)', secondary: '#FFD700' },
+    { id: 'bosnia', name: 'Bosnia', colors: 'from-[#2D0A1C] via-[#0A0206] to-black', glow: 'rgba(136, 19, 55, 0.3)', secondary: '#3B82F6' },
+    { id: 'timor-leste', name: 'Timor-Leste', colors: 'from-[#0B291A] via-[#020B05] to-black', glow: 'rgba(5, 150, 105, 0.3)', secondary: '#F59E0B' },
+    { id: 'kyrgyzstan', name: 'Kyrgyzstan', colors: 'from-[#0A1C3A] via-[#020710] to-black', glow: 'rgba(30, 64, 175, 0.3)', secondary: '#EF4444' }
+  ].map((c) => `
+            <div data-country="${c.name}" class="luxury-card-wrapper group cursor-pointer h-full">
+              <div class="luxury-card relative aspect-[3/4] rounded-2xl border border-white/10 overflow-hidden bg-gradient-to-br ${c.colors} shadow-2xl transition-all duration-700 ease-out preserve-3d group-hover:border-brand-gold/30">
+                <!-- Metallic Sweep -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-[150%] skew-x-[-20deg] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></div>
+                
+                <!-- Atmosphere Glow -->
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style="background: radial-gradient(circle at center, ${c.glow} 0%, transparent 70%);"></div>
+
+                <div class="absolute inset-0 flex flex-col items-center justify-between p-8 z-10">
+                  <div class="text-[9px] font-special uppercase tracking-[0.4em] text-brand-gold/60 group-hover:text-brand-gold transition-colors duration-500">${c.name}</div>
+                  
+                  <!-- Emblem -->
+                  <div class="relative w-20 h-20 md:w-24 md:h-24 rounded-full border border-white/10 flex items-center justify-center bg-black/40 backdrop-blur-md group-hover:border-brand-gold/40 transition-all duration-700 scale-90 group-hover:scale-100 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <div class="absolute inset-2 rounded-full border-[0.5px] border-white/5 border-dashed group-hover:border-brand-gold/20 animate-spin-slow"></div>
+                    <img src="/flags/${c.name === 'Uzbekistan' ? 'uzbekistan' : c.name}.png" alt="${c.name}" class="w-[70%] h-[70%] object-cover rounded-full z-10 filter grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700" />
+                    <!-- Inner Glow -->
+                    <div class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" style="box-shadow: inset 0 0 20px ${c.glow}, 0 0 20px ${c.glow};"></div>
+                  </div>
+
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-1 h-8 bg-gradient-to-b from-brand-gold/40 to-transparent group-hover:h-12 transition-all duration-700"></div>
+                    <div class="text-[7px] font-special uppercase tracking-[0.6em] text-white/30 group-hover:text-brand-gold/60">Gateway</div>
+                  </div>
+                </div>
+
+                <!-- Metallic Border Glow -->
+                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 border border-brand-gold/20 rounded-2xl pointer-events-none shadow-[inset_0_0_20px_rgba(201,166,90,0.1)]"></div>
               </div>
-              
-              <div class="text-brand-gold/60 uppercase tracking-[0.25em] text-[6px] md:text-[7px] font-special text-center mb-1 z-10" style="text-shadow: 0 1px 2px rgba(0,0,0,0.8);">PASSPORT</div>
-              
-              <!-- Glare effect -->
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-md z-20" style="transform: translateX(-100%) skewX(-15deg); animation: shimmer 3s infinite; animation-play-state: paused;"></div>
             </div>
           `).join('')}
-          <style>
-            .passport-card:hover .bg-gradient-to-tr { animation-play-state: running; }
-            @keyframes shimmer { 100% { transform: translateX(200%) skewX(-15deg); } }
-          </style>
         </div>
       </div>
     </section>
@@ -268,64 +284,64 @@ app.innerHTML = `
       </div>
     </div>
    
- <!-- Why Us Section -->
-    <section id="whyus" class="snap-section bg-[#050505] text-white py-14 min-h-screen flex flex-col justify-center">
-      <div class="max-w-[85rem] mx-auto px-6 w-full relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-2 gap-8 whyus-header">
-          <div class="max-w-2xl">
-            <h2 class="text-6xl md:text-8xl font-heading leading-none tracking-tighter text-brand-gold uppercase mb-3">
-              Why<br/>Choose <span class="text-white italic font-serif normal-case tracking-normal">US?</span>
-            </h2>
-            <p class="text-white/80 text-xl md:text-2xl font-serif italic max-w-xl leading-relaxed">
-              Focus on increasing admissions, not just visibility
-            </p>
-          </div>
-          <div class="hidden md:block w-32 h-32 border-2 border-brand-gold/30 rounded-full flex items-center justify-center animate-spin-slow">
-            <div class="text-brand-gold text-4xl">✦</div>
-          </div>
-        </div>
+  <!-- Why Us Section -->
+  <section id="whyus" class="snap-section bg-[#0B1B3D] text-brand-beige py-20 min-h-screen flex flex-col justify-center relative overflow-hidden">
+    <div class="max-w-[75rem] mx-auto px-6 w-full relative z-10 flex flex-col gap-16 mt-16 md:mt-0">
+      
+      <!-- Header -->
+      <div class="text-center whyus-header">
+        <h2 class="text-5xl md:text-7xl font-heading font-bold uppercase tracking-wide text-brand-beige">
+          WHY CHOOSE <span class="text-brand-gold">US?</span>
+        </h2>
+      </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 whyus-grid">
-          ${[
-    { num: '01', title: 'Expertise in school & education marketing' },
-    { num: '02', title: 'Creative content (photos, videos, posts)' },
-    { num: '03', title: 'Complete digital marketing under one roof' },
-    { num: '04', title: 'Strong local audience targeting' },
-    { num: '05', title: 'Regular reports & transparent work' },
-    { num: '06', title: 'Cost-effective solutions' },
-    { num: '07', title: 'Easy communication & quick support' },
-    { num: '08', title: 'Work based on real logic, not just theory' }
-  ].map((item) => `
-            <div class="whyus-card group relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] transition-all duration-500">
-              <div class="flex flex-col gap-6">
-                <div class="flex items-center gap-4">
-                  <span class="text-brand-gold font-heading text-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500">${item.num}</span>
-                  <div class="h-[1px] flex-grow bg-brand-gold/20 group-hover:bg-brand-gold/50 transition-all duration-500"></div>
-                </div>
-                <h3 class="text-lg md:text-xl font-heading leading-snug group-hover:text-brand-gold transition-colors duration-500">
-                  ${item.title}
-                </h3>
-              </div>
-              <!-- Decorative corner -->
-              <div class="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-brand-gold/0 group-hover:border-brand-gold/40 transition-all duration-500 rounded-br-lg"></div>
+      <!-- 8 Points Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 whyus-grid max-w-4xl mx-auto w-full">
+        ${[
+    "Transparent & Honest Guidance",
+    "Focus on Affordable Options",
+    "Student Safety is Our Priority",
+    "Structured & Professional Process",
+    "End-to-End Support",
+    "Personalized Guidance",
+    "Reliable University Selection",
+    "Post travel Support"
+  ].map(text => `
+          <div class="flex items-center gap-5 whyus-card group">
+            <div class="w-14 h-16 flex-shrink-0 flex items-center justify-center border-2 border-brand-gold rounded-b-2xl rounded-t-sm relative shadow-[0_0_15px_rgba(203,167,91,0.2)] group-hover:bg-brand-gold/10 transition-colors">
+              <svg class="w-7 h-7 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
             </div>
-          `).join('')}
+            <span class="text-xl md:text-2xl font-serif text-brand-beige/90 tracking-wide font-medium leading-snug">${text}</span>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Plane Divider -->
+      <div class="relative w-full flex items-center justify-center py-6 whyus-card">
+        <div class="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-brand-gold/50 to-transparent"></div>
+        <div class="bg-[#0B1B3D] px-4 relative z-10 text-brand-gold">
+          <svg class="w-10 h-10 transform rotate-90" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
         </div>
       </div>
-    </section>
+
+      <!-- Comparison Cards -->
+
+
+    </div>
+  </section>
     <!-- Footer Section -->
-    <section id="contact" class="snap-section bg-[#e8e2d8] relative overflow-hidden min-h-screen flex items-center pt-24 pb-12 scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; document.querySelector('.snap-container').scrollTo({top: 0, behavior: 'smooth'})">
+    <section id="contact" class="snap-section bg-[#0B1B3D] relative overflow-hidden min-h-screen flex items-center pt-24 pb-12 scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; document.querySelector('.snap-container').scrollTo({top: 0, behavior: 'smooth'})">
       <!-- Watermark Background -->
       <div class="absolute inset-0 flex items-start justify-center pointer-events-none select-none z-0 overflow-hidden pt-12 md:pt-16 footer-watermark">
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">G</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">n</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">d</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">h</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">r</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">v</span>
-        <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">G</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">n</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">d</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">h</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">r</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">v</span>
+        <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
       </div>
       
       <div class="max-w-[85rem] mx-auto px-6 w-full z-10 relative flex flex-col h-full justify-center">
@@ -335,64 +351,64 @@ app.innerHTML = `
           <div class="col-span-1 md:col-span-3 flex flex-col gap-6">
             <div class="flex items-center gap-3">
               <div class="flex items-center gap-2">
-                <img src="/logo.png" alt="Gandharva" style="height: 48px; width: auto; mix-blend-mode: multiply;" />
+                <img src="/logo.png" alt="Gandharva" style="height: 48px; width: auto;" />
               </div>
-              <span class="text-2xl font-heading font-bold text-[#0B1C3D]">Gandharva</span>
+              <span class="text-2xl font-heading font-bold text-brand-gold">Gandharva</span>
             </div>
-            <p class="text-sm text-slate-500 font-special leading-relaxed max-w-[260px]">
+            <p class="text-sm text-brand-beige/70 font-special leading-relaxed max-w-[260px]">
               Strategic counseling and guidance tailored to drive admission success in top medical universities.
             </p>
           </div>
 
           <!-- Col 2 -->
           <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-            <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Company</h4>
+            <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Company</h4>
            
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Achievements</a>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">FAQs</a>
-            <a href="/brand.html" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
-            <a href="#contact" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
+            <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Achievements</a>
+            <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">FAQs</a>
+            <a href="/brand.html" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Brand</a>
+            <a href="#contact" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Contact</a>
           </div>
 
           <!-- Col 3: Socials -->
           <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-            <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Socials</h4>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-              Email <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+            <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Socials</h4>
+            <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+              Email <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
             </a>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-              Instagram <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+            <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+              Instagram <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
             </a>
-            <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-              LinkedIn <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+            <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+              LinkedIn <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
             </a>
           </div>
 
           <!-- Col 4 (Branches) -->
           <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-            <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Our Branches</h4>
+            <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Our Branches</h4>
             <div class="flex flex-col gap-4">
               <div>
-                <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Head Office</p>
-                <p class="text-sm text-slate-500 font-special leading-relaxed">Shivamogga, India</p>
+                <p class="text-xs font-bold tracking-wider uppercase text-brand-gold mb-1">Head Office</p>
+                <p class="text-sm text-brand-beige/70 font-special leading-relaxed">Shivamogga, India</p>
               </div>
               <div>
-                <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Regional Branch</p>
-                <p class="text-sm text-slate-500 font-special leading-relaxed">Davanagere, India</p>
+                <p class="text-xs font-bold tracking-wider uppercase text-brand-gold mb-1">Regional Branch</p>
+                <p class="text-sm text-brand-beige/70 font-special leading-relaxed">Davanagere, India</p>
               </div>
             </div>
           </div>
 
           <!-- Col 5 -->
           <div class="col-span-1 md:col-span-3 flex flex-col gap-4 pl-0 md:pl-4">
-            <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Newsletter</h4>
-            <p class="text-sm text-slate-500 font-special leading-relaxed max-w-sm">
+            <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Newsletter</h4>
+            <p class="text-sm text-brand-beige/70 font-special leading-relaxed max-w-sm">
               Stay ahead with abroad studies tips and university admission strategies that drive results.
             </p>
             <div class="relative mt-2 max-w-sm">
-              <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 font-special text-sm">@</span>
-              <input type="email" placeholder="Enter your email..." class="w-full bg-white border border-slate-200/60 rounded-full py-3.5 pl-12 pr-12 text-sm focus:outline-none focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF] transition-all text-slate-700 shadow-sm font-special placeholder:text-slate-400">
-              <button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0066FF] text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-sm">
+              <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brand-gold font-special text-sm">@</span>
+              <input type="email" placeholder="Enter your email..." class="w-full bg-[#0B1B3D] border border-brand-gold/30 rounded-full py-3.5 pl-12 pr-12 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-brand-beige shadow-sm font-special placeholder:text-brand-beige/50">
+              <button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand-gold text-[#0B1B3D] rounded-full flex items-center justify-center hover:bg-[#b09045] transition-colors shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </button>
             </div>
@@ -400,39 +416,67 @@ app.innerHTML = `
         </div>
 
         <!-- Map Section -->
-        <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-start">
-          <div class="w-full md:w-1/2 flex flex-col gap-4">
-            <h4 class="font-bold text-[#0B1C3D] font-heading text-2xl flex items-center gap-2">
-              <span>📍</span> Our Location
-            </h4>
-            <p class="text-slate-500 font-special leading-relaxed text-lg">
-              2nd Floor, Sree Karthik Plaza,<br/>
-              Opp. Mallikarjuna Talkies,<br/>
-              Durgigudi, Shivamogga, Karnataka 577201
-            </p>
-            <div class="flex gap-4 mt-2">
-              <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-[#0066FF] font-bold font-heading hover:underline">Get Directions ↗</a>
+        <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-stretch">
+          
+          <!-- Shivamogga Map -->
+          <div class="w-full md:w-1/2 flex flex-col gap-6 bg-[#0B1B3D] p-6 rounded-3xl border border-brand-gold/20 shadow-lg">
+            <div class="flex flex-col gap-2">
+              <h4 class="font-bold text-brand-beige font-heading text-2xl flex items-center gap-2">
+                <span class="text-brand-gold">📍</span> Shivamogga Office
+              </h4>
+              <p class="text-brand-beige/70 font-special leading-relaxed text-sm">
+                2nd Floor, Sree Karthik Plaza,<br/>
+                Opp. Mallikarjuna Talkies,<br/>
+                Durgigudi, Shivamogga, Karnataka 577201
+              </p>
+              <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-brand-gold font-bold font-heading hover:text-brand-beige transition-colors w-fit text-sm mt-1">Get Directions ↗</a>
+            </div>
+            <div class="w-full h-[200px] rounded-2xl overflow-hidden shadow-inner border border-brand-gold/10">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                style="border:0" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade" 
+                src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
+              </iframe>
             </div>
           </div>
-          <div class="w-full md:w-1/2 h-[250px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-            <iframe 
-              width="100%" 
-              height="100%" 
-              style="border:0" 
-              loading="lazy" 
-              allowfullscreen 
-              referrerpolicy="no-referrer-when-downgrade" 
-              src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
-            </iframe>
+
+          <!-- Davanagere Map -->
+          <div class="w-full md:w-1/2 flex flex-col gap-6 bg-[#0B1B3D] p-6 rounded-3xl border border-brand-gold/20 shadow-lg">
+            <div class="flex flex-col gap-2">
+              <h4 class="font-bold text-brand-beige font-heading text-2xl flex items-center gap-2">
+                <span class="text-brand-gold">📍</span> Davanagere Office
+              </h4>
+              <p class="text-brand-beige/70 font-special leading-relaxed text-sm">
+                Gandharva Abroad Studies,<br/>
+                Davanagere, Karnataka
+              </p>
+              <a href="https://maps.google.com/?q=Davanagere+Karnataka" target="_blank" class="text-brand-gold font-bold font-heading hover:text-brand-beige transition-colors w-fit text-sm mt-1">Get Directions ↗</a>
+            </div>
+            <div class="w-full h-[200px] rounded-2xl overflow-hidden shadow-inner border border-brand-gold/10">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                style="border:0" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade" 
+                src="https://www.google.com/maps?q=Davanagere+Karnataka&output=embed">
+              </iframe>
+            </div>
           </div>
+
         </div>
 
         <!-- Bottom Row -->
-        <div class="flex flex-col md:flex-row justify-between items-center mt-32 pt-8 text-sm text-slate-500 font-special w-full border-t border-slate-200/50">
+        <div class="flex flex-col md:flex-row justify-between items-center mt-20 pt-8 text-sm text-slate-500 font-special w-full border-t border-brand-gold/20">
           <p>©2026 Gandharva All rights reserved</p>
           <div class="flex gap-8 mt-4 md:mt-0">
-            <a href="#" class="hover:text-[#0B1C3D] transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-[#0B1C3D] transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-brand-navy transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-brand-navy transition-colors">Terms of Service</a>
           </div>
         </div>
 
@@ -961,7 +1005,7 @@ const modalContent = modal?.querySelector('.modal-content');
 const modalBody = document.getElementById('modal-body');
 const closeBtn = document.getElementById('close-modal');
 
-document.querySelectorAll('.passport-card').forEach(card => {
+document.querySelectorAll('.luxury-card-wrapper').forEach(card => {
   card.addEventListener('click', (e) => {
     const countryName = (e.currentTarget as HTMLElement).dataset.country;
     if (!countryName || !modal || !modalBody || !modalContent) return;
@@ -1196,9 +1240,9 @@ function initTestimonials() {
   const testimonialDots = document.getElementById('testimonialDots');
   const prevBtn = document.getElementById('prevTestimonial');
   const nextBtn = document.getElementById('nextTestimonial');
-  
+
   if (!testimonialTrack) return;
-  
+
   // Query slides INSIDE the function to ensure they are found after render
   const testimonialSlides = document.querySelectorAll('.testimonial-slide');
   let currentSlide = 0;
@@ -1235,7 +1279,7 @@ function initTestimonials() {
     // xPercent is based on track's own width. 
     // Each slide is 1/N of the track.
     const stepPercent = 100 / testimonialSlides.length;
-    
+
     gsap.to(testimonialTrack, {
       xPercent: -currentSlide * stepPercent,
       duration: immediate ? 0 : 0.8,
@@ -1306,10 +1350,104 @@ function initTestimonials() {
 }
 
 // Call initialization
-window.addEventListener('DOMContentLoaded', initTestimonials);
+window.addEventListener('DOMContentLoaded', () => {
+  initTestimonials();
+  initCinematicCountries();
+});
 // Also call immediately just in case DOM is already ready
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
   initTestimonials();
+  initCinematicCountries();
+}
+
+function initCinematicCountries() {
+  const container = document.querySelector('.country-grid');
+  const cards = document.querySelectorAll('.luxury-card-wrapper');
+  const particlesContainer = document.getElementById('particles-container');
+
+  if (!container) return;
+
+  // Cinematic Particles
+  if (particlesContainer) {
+    for (let i = 0; i < 50; i++) {
+      const p = document.createElement('div');
+      p.className = 'absolute w-1 h-1 bg-white/10 rounded-full';
+      particlesContainer.appendChild(p);
+      gsap.set(p, {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        scale: Math.random() * 0.5 + 0.5,
+        opacity: Math.random() * 0.3 + 0.1
+      });
+      gsap.to(p, {
+        y: '-=100',
+        duration: Math.random() * 20 + 10,
+        repeat: -1,
+        ease: 'none',
+        delay: Math.random() * -20
+      });
+    }
+  }
+
+  // 3D Tilt Interaction
+  cards.forEach(card => {
+    const inner = card.querySelector('.luxury-card') as HTMLElement;
+
+    card.addEventListener('mousemove', (e: any) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (y - centerY) / 10;
+      const rotateY = (centerX - x) / 10;
+
+      gsap.to(inner, {
+        rotateX,
+        rotateY,
+        scale: 1.05,
+        duration: 0.5,
+        ease: 'power2.out'
+      });
+
+      // Ambient sibling fade
+      cards.forEach(c => {
+        if (c !== card) {
+          gsap.to(c, { opacity: 0.4, filter: 'blur(2px)', duration: 0.5 });
+        }
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      gsap.to(inner, {
+        rotateX: 0,
+        rotateY: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: 'elastic.out(1, 0.5)'
+      });
+
+      // Restore siblings
+      cards.forEach(c => {
+        gsap.to(c, { opacity: 1, filter: 'blur(0px)', duration: 0.5 });
+      });
+    });
+  });
+
+  // World Grid Scroll Animation
+  gsap.from('.world-grid-bg', {
+    scale: 1.2,
+    opacity: 0,
+    duration: 3,
+    scrollTrigger: {
+      trigger: '#countries',
+      start: 'top 80%',
+      end: 'bottom bottom',
+      scrub: true
+    }
+  });
 }
 
 // Performance Optimizations

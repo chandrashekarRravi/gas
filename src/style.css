@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #0B1C3D;
-  --color-brand-gold: #C9A65A;
-  --color-brand-beige: #E8E2D8;
+  --color-brand-navy: #0B1B3D;
+  --color-brand-gold: #CBA75B;
+  --color-brand-beige: #E7E3D8;
   --color-brand-muted: #2F3E4E;
 }
 
 body {
-  background-color: var(--color-brand-navy);
+  background-color: #0B1B3D;
   color: var(--color-brand-beige);
   overflow-x: hidden;
   font-family: 'GeneralSans-Variable', 'General Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
   font-family: 'ClashDisplay-Variable', 'Clash Display', sans-serif;
 }
 
@@ -64,7 +70,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, rgba(11, 28, 61, 0.9), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
 }
 
 .nav-links a {
@@ -117,12 +123,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   width: 45vw;
   height: 45vw;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.05);
-  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, transparent 60%), url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.264) 0%, transparent 60%), url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
   background-size: cover;
   background-position: 92.89% center;
-  background-blend-mode: screen;
-  box-shadow: 
+  box-shadow:
     inset 0 0 100px rgba(255, 255, 255, 0.5),
     inset 0 0 30px rgba(255, 255, 255, 0.7),
     0 0 120px rgba(255, 255, 255, 0.3),
@@ -133,12 +138,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   overflow: hidden;
 }
 
-.earth-arc::before, .earth-arc::after {
+.earth-arc::before,
+.earth-arc::after {
   content: '';
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(232, 226, 216, 0.1);
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .earth-arc::before {
@@ -158,8 +167,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -172,8 +186,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .animate-spin-slow {
@@ -188,7 +207,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   transform: translateY(-10px);
 }
 
-.testimonial-card, .video-card {
+.testimonial-card,
+.video-card {
   will-change: transform, opacity;
 }
 
@@ -245,9 +265,19 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 @keyframes orbit-glow {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
 }
 
 @media (pointer: coarse) {
@@ -261,12 +291,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   display: flex;
   flex-direction: column;
   transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-slide {
-  opacity: 1; /* Always visible in the clean design */
+  opacity: 1;
+  /* Always visible in the clean design */
   transform: none;
 }
 

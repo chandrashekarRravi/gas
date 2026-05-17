@@ -304,18 +304,18 @@ app.innerHTML = `
   </div>
   
   <!-- Footer Section -->
-  <section id="contact" class="bg-[#e8e2d8] relative overflow-hidden flex items-center pt-24 pb-12 mt-auto scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; window.scrollTo({top: 0, behavior: 'smooth'})">
+  <section id="contact" class="bg-[#0B1B3D] relative overflow-hidden flex items-center pt-24 pb-12 mt-auto scroll-up-cursor" onclick="if(event.target.closest('a') || event.target.closest('input') || event.target.closest('button')) return; window.scrollTo({top: 0, behavior: 'smooth'})">
     <!-- Watermark Background -->
     <div class="absolute inset-0 flex items-start justify-center pointer-events-none select-none z-0 overflow-hidden pt-12 md:pt-16 footer-watermark">
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">G</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">n</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">d</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">h</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">r</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">v</span>
-      <span class="text-[18vw] font-heading font-bold text-[#D9D5D0] opacity-60 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">G</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">n</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">d</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">h</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">r</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">v</span>
+      <span class="text-[18vw] font-heading font-bold text-brand-beige/5 tracking-tighter whitespace-nowrap leading-none inline-block">a</span>
     </div>
     
     <div class="max-w-[85rem] mx-auto px-6 w-full z-10 relative flex flex-col h-full justify-center">
@@ -327,61 +327,61 @@ app.innerHTML = `
             <div class="flex items-center gap-2">
               <img src="/logo.png" alt="Gandharva" style="height: 48px; width: auto;" />
             </div>
-            <span class="text-2xl font-heading font-bold text-[#0B1C3D]">Gandharva</span>
+            <span class="text-2xl font-heading font-bold text-brand-gold">Gandharva</span>
           </div>
-          <p class="text-sm text-slate-500 font-special leading-relaxed max-w-[260px]">
+          <p class="text-sm text-brand-beige/70 font-special leading-relaxed max-w-[260px]">
             Strategic counseling and guidance tailored to drive admission success in top medical universities.
           </p>
         </div>
 
         <!-- Col 2 -->
         <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-          <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Company</h4>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Achievements</a>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">FAQs</a>
-          <a href="/brand.html" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Brand</a>
-          <a href="#contact" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors">Contact</a>
+          <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Company</h4>
+          <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Achievements</a>
+          <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">FAQs</a>
+          <a href="/brand.html" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Brand</a>
+          <a href="#contact" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors">Contact</a>
         </div>
 
         <!-- Col 3: Socials -->
         <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-          <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Socials</h4>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-            Email <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+          <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Socials</h4>
+          <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+            Email <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
           </a>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-            Instagram <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+          <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+            Instagram <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
           </a>
-          <a href="#" class="text-slate-500 hover:text-[#0B1C3D] text-sm font-special transition-colors flex items-center justify-between w-28 group">
-            LinkedIn <span class="group-hover:translate-x-1 transition-transform text-xs">↗</span>
+          <a href="#" class="text-brand-beige/70 hover:text-brand-gold text-sm font-special transition-colors flex items-center justify-between w-28 group">
+            LinkedIn <span class="group-hover:translate-x-1 transition-transform text-xs text-brand-gold">↗</span>
           </a>
         </div>
 
         <!-- Col 4 (Branches) -->
         <div class="col-span-1 md:col-span-2 flex flex-col gap-4">
-          <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Our Branches</h4>
+          <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Our Branches</h4>
           <div class="flex flex-col gap-4">
             <div>
-              <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Head Office</p>
-              <p class="text-sm text-slate-500 font-special leading-relaxed">Shivamogga, India</p>
+              <p class="text-xs font-bold tracking-wider uppercase text-brand-gold mb-1">Head Office</p>
+              <p class="text-sm text-brand-beige/70 font-special leading-relaxed">Shivamogga, India</p>
             </div>
             <div>
-              <p class="text-xs font-bold tracking-wider uppercase text-slate-400 mb-1">Regional Branch</p>
-              <p class="text-sm text-slate-500 font-special leading-relaxed">Davanagere, India</p>
+              <p class="text-xs font-bold tracking-wider uppercase text-brand-gold mb-1">Regional Branch</p>
+              <p class="text-sm text-brand-beige/70 font-special leading-relaxed">Davanagere, India</p>
             </div>
           </div>
         </div>
 
         <!-- Col 5 -->
         <div class="col-span-1 md:col-span-3 flex flex-col gap-4 pl-0 md:pl-4">
-          <h4 class="font-bold text-[#0B1C3D] font-heading mb-2 text-[15px]">Newsletter</h4>
-          <p class="text-sm text-slate-500 font-special leading-relaxed max-w-sm">
+          <h4 class="font-bold text-brand-gold font-heading mb-2 text-[15px]">Newsletter</h4>
+          <p class="text-sm text-brand-beige/70 font-special leading-relaxed max-w-sm">
             Stay ahead with abroad studies tips and university admission strategies that drive results.
           </p>
           <div class="relative mt-2 max-w-sm">
-            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 font-special text-sm">@</span>
-            <input type="email" placeholder="Enter your email..." class="w-full bg-white border border-slate-200/60 rounded-full py-3.5 pl-12 pr-12 text-sm focus:outline-none focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF] transition-all text-slate-700 shadow-sm font-special placeholder:text-slate-400">
-            <button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0066FF] text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors shadow-sm">
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-brand-gold font-special text-sm">@</span>
+            <input type="email" placeholder="Enter your email..." class="w-full bg-[#0B1B3D] border border-brand-gold/30 rounded-full py-3.5 pl-12 pr-12 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all text-brand-beige shadow-sm font-special placeholder:text-brand-beige/50">
+            <button class="absolute right-1.5 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand-gold text-[#0B1B3D] rounded-full flex items-center justify-center hover:bg-[#b09045] transition-colors shadow-sm">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </button>
           </div>
@@ -389,39 +389,67 @@ app.innerHTML = `
       </div>
 
       <!-- Map Section -->
-      <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-start">
-        <div class="w-full md:w-1/2 flex flex-col gap-4">
-          <h4 class="font-bold text-[#0B1C3D] font-heading text-2xl flex items-center gap-2">
-            <span>📍</span> Our Location
-          </h4>
-          <p class="text-slate-500 font-special leading-relaxed text-lg">
-            2nd Floor, Sree Karthik Plaza,<br/>
-            Opp. Mallikarjuna Talkies,<br/>
-            Durgigudi, Shivamogga, Karnataka 577201
-          </p>
-          <div class="flex gap-4 mt-2">
-            <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-[#0066FF] font-bold font-heading hover:underline">Get Directions ↗</a>
+      <div class="mt-16 w-full flex flex-col md:flex-row gap-8 items-stretch">
+        
+        <!-- Shivamogga Map -->
+        <div class="w-full md:w-1/2 flex flex-col gap-6 bg-[#0B1B3D] p-6 rounded-3xl border border-brand-gold/20 shadow-lg">
+          <div class="flex flex-col gap-2">
+            <h4 class="font-bold text-brand-beige font-heading text-2xl flex items-center gap-2">
+              <span class="text-brand-gold">📍</span> Shivamogga Office
+            </h4>
+            <p class="text-brand-beige/70 font-special leading-relaxed text-sm">
+              2nd Floor, Sree Karthik Plaza,<br/>
+              Opp. Mallikarjuna Talkies,<br/>
+              Durgigudi, Shivamogga, Karnataka 577201
+            </p>
+            <a href="https://maps.app.goo.gl/J9EfWhb6aTFbUzNV8" target="_blank" class="text-brand-gold font-bold font-heading hover:text-brand-beige transition-colors w-fit text-sm mt-1">Get Directions ↗</a>
+          </div>
+          <div class="w-full h-[200px] rounded-2xl overflow-hidden shadow-inner border border-brand-gold/10">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              style="border:0" 
+              loading="lazy" 
+              allowfullscreen 
+              referrerpolicy="no-referrer-when-downgrade" 
+              src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
+            </iframe>
           </div>
         </div>
-        <div class="w-full md:w-1/2 h-[250px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-          <iframe 
-            width="100%" 
-            height="100%" 
-            style="border:0" 
-            loading="lazy" 
-            allowfullscreen 
-            referrerpolicy="no-referrer-when-downgrade" 
-            src="https://www.google.com/maps?q=Gandharva+abroad+studies+Shivamogga&output=embed">
-          </iframe>
+
+        <!-- Davanagere Map -->
+        <div class="w-full md:w-1/2 flex flex-col gap-6 bg-[#0B1B3D] p-6 rounded-3xl border border-brand-gold/20 shadow-lg">
+          <div class="flex flex-col gap-2">
+            <h4 class="font-bold text-brand-beige font-heading text-2xl flex items-center gap-2">
+              <span class="text-brand-gold">📍</span> Davanagere Office
+            </h4>
+            <p class="text-brand-beige/70 font-special leading-relaxed text-sm">
+              Gandharva Abroad Studies,<br/>
+              Davanagere, Karnataka
+            </p>
+            <a href="https://maps.google.com/?q=Davanagere+Karnataka" target="_blank" class="text-brand-gold font-bold font-heading hover:text-brand-beige transition-colors w-fit text-sm mt-1">Get Directions ↗</a>
+          </div>
+          <div class="w-full h-[200px] rounded-2xl overflow-hidden shadow-inner border border-brand-gold/10">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              style="border:0" 
+              loading="lazy" 
+              allowfullscreen 
+              referrerpolicy="no-referrer-when-downgrade" 
+              src="https://www.google.com/maps?q=Davanagere+Karnataka&output=embed">
+            </iframe>
+          </div>
         </div>
+
       </div>
 
       <!-- Bottom Row -->
-      <div class="flex flex-col md:flex-row justify-between items-center mt-32 pt-8 text-sm text-slate-500 font-special w-full border-t border-slate-200/50">
+      <div class="flex flex-col md:flex-row justify-between items-center mt-20 pt-8 text-sm text-slate-500 font-special w-full border-t border-brand-gold/20">
         <p>©2026 Gandharva All rights reserved</p>
         <div class="flex gap-8 mt-4 md:mt-0">
-          <a href="#" class="hover:text-[#0B1C3D] transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-[#0B1C3D] transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-brand-navy transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-brand-navy transition-colors">Terms of Service</a>
         </div>
       </div>
 
