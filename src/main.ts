@@ -131,7 +131,7 @@ app.innerHTML = `
       <div class="max-w-[90rem] mx-auto px-6 w-full">
         <!-- Header -->
         <div class="text-center mb-16 testimonial-title">
-          <h3 class="text-[10px] font-special uppercase tracking-[0.4em] text-slate-400 mb-4">Customer Reviews</h3>
+          <h3 class="text-[10px] font-special uppercase tracking-[0.4em] text-slate-400 mb-4">Students Voices</h3>
           <h2 class="text-4xl md:text-6xl font-heading leading-[1.1] tracking-tight max-w-4xl mx-auto">
             What our <span class="italic font-serif font-normal">students</span> say about us
           </h2>
@@ -1323,7 +1323,7 @@ function initTestimonials() {
   });
 
   // Auto play
-  let autoPlay = setInterval(() => {
+  setInterval(() => {
     if (document.visibilityState === 'visible' && !isAnimating) {
       const cardsPerView = getCardsPerView();
       if (currentSlide < testimonialSlides.length - cardsPerView) {

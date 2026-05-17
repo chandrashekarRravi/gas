@@ -51,6 +51,10 @@ h6,
   justify-content: center;
 }
 
+.snap-section > div {
+  will-change: transform, opacity;
+}
+
 .glass-panel {
   background: rgba(47, 62, 78, 0.4);
   backdrop-filter: blur(8px);
@@ -199,16 +203,9 @@ h6,
   animation: spin-slow 12s linear infinite;
 }
 
-.whyus-card {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.whyus-card:hover {
-  transform: translateY(-10px);
-}
-
 .testimonial-card,
-.video-card {
+.video-card,
+.whyus-card {
   will-change: transform, opacity;
 }
 
